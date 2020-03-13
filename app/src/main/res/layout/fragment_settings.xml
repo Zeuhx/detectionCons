@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="descartes.info.l3ag2.eyetrek.fragment.FragmentSettings">
+
+        <EditText
+            android:textSize="15sp"
+            android:background="@drawable/button_whiteborder"
+            android:layout_marginTop="10dp"
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:hint="Nouveau e-mail"
+            android:padding="2dp"
+            android:drawableLeft="@drawable/ic_action_logname"
+            android:textColorHint="@color/white"/>
+
+        <EditText
+            android:textSize="15sp"
+            android:background="@drawable/button_whiteborder"
+            android:layout_marginTop="55dp"
+            android:id="@+id/password1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:hint="Nouveau mot de passe"
+            android:padding="2dp"
+            android:drawableLeft="@drawable/ic_action_password"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:textSize="15sp"
+            android:background="@drawable/button_whiteborder"
+            android:layout_marginTop="105dp"
+            android:id="@+id/password2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:hint="Confirmation mot de passe"
+            android:padding="2dp"
+            android:drawableLeft="@drawable/ic_action_password"
+            android:textColorHint="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="155dp"
+            android:text="Année(s) d'expérience(s):"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="185dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"
+                android:text="-"
+                android:textColor="@color/white"
+                android:background="@drawable/button_whiteborder"/>
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:background="@drawable/button_whiteborder"/>
+        </LinearLayout>
+
+        <Button
+            android:textSize="15sp"
+            android:id="@+id/modify"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="225dp"
+            android:text="Valider"
+            android:minHeight="40dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_whiteborder"/>
+
+</FrameLayout>

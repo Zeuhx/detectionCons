@@ -1,0 +1,11 @@
+0
+0
+0
+
+=== === NOTES === ===
+
+1e ligne : modele feuilles
+2e ligne : modele champignons
+3e ligne : modele oiseaux
+
+=== === ===k== === ===

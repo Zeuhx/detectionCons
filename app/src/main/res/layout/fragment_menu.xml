@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="56dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/leaf_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            android:src="@drawable/leaf_button" />
+        <TextView
+            android:background="@color/transparent_gray"
+            android:text="Feuilles"
+            android:fontFamily="sans-serif-thin"
+            android:layout_gravity="bottom"
+            android:paddingEnd="10dp"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:gravity="right|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/animal_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            android:src="@drawable/animal_button"
+            />
+        <TextView
+            android:background="@color/transparent_gray"
+            android:text="Empreintes"
+            android:fontFamily="sans-serif-thin"
+            android:layout_gravity="bottom"
+            android:paddingEnd="10dp"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:gravity="right|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/bird_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bird_button" />
+        <TextView
+            android:background="@color/transparent_gray"
+            android:text="Oiseaux"
+            android:fontFamily="sans-serif-thin"
+            android:layout_gravity="bottom"
+            android:paddingEnd="10dp"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:gravity="right|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

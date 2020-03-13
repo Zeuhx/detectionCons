@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_animals">
+
+    <TextView
+        android:id="@+id/textEmpreintes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Forme de l'empreintes"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@color/transparent_black"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="44dp"
+        android:paddingVertical="10dp"/>
+
+    <ImageButton
+        android:id="@+id/cancel"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/ic_bouton_annuler_32dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="22dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_group"
+        android:layout_below="@id/textEmpreintes"
+        android:layout_marginTop="120dp"
+        android:gravity="center">
+
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/img_footprint1"
+            android:background="@drawable/footprint_3"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/img_footprint2"
+            android:layout_toEndOf="@id/img_footprint1"
+            android:background="@drawable/footprint_4"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_toEndOf="@id/img_footprint2"
+            android:background="@drawable/footprint_1" />
+
+
+    </RelativeLayout>
+
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupe"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/img_group"
+        android:orientation="horizontal"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="44dp"
+        >
+
+        <RadioButton
+            android:id="@+id/radio_mains"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Mains"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/transparent_gray"
+            android:textAlignment="center"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_sabots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Sabots"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/transparent_gray"
+            android:textAlignment="center"/>
+
+        <RadioButton
+            android:id="@+id/radio_pelotte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Coussinets"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/transparent_gray"
+            android:textAlignment="center"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:text="Next >"
+        android:background="@drawable/button_whiteborder"
+        android:backgroundTint="@color/transparent_black"
+        />
+
+</RelativeLayout>

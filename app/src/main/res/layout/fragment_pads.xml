@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_animals">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Empreintes Coussinets"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@color/transparent_black"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="44dp"
+        android:paddingVertical="10dp"
+        />
+
+    <ImageButton
+        android:id="@+id/cancel"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/ic_bouton_annuler_32dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="22dp"
+
+        />
+
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupeNbCoussinet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="44dp">
+
+        <RadioButton
+            android:id="@+id/radio_4Coussinets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4 Coussinets"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/transparent_gray"
+            android:textColorHighlight="@color/red_record"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_5Coussinets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5 Coussinets"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/transparent_gray"
+            />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/footprint_1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/groupeNbCoussinet"
+        android:layout_marginStart="44dp"
+        android:background="@drawable/footprint_2"
+        android:layout_marginTop="40dp"
+        />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/groupeNbCoussinet"
+        android:layout_marginStart="42dp"
+        android:layout_toEndOf="@id/footprint_1"
+        android:background="@drawable/footprint_1"
+        android:layout_marginTop="40dp"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupeGriffe"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/groupeNbCoussinet"
+        android:layout_marginTop="200dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp">
+
+
+
+        <RadioButton
+            android:id="@+id/radio_Non"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Sans Griffes"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/transparent_gray"/>
+
+        <RadioButton
+            android:id="@+id/radio_Oui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Avec Griffes"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/transparent_gray" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="70dp"
+        android:text="Réinitisaliser"
+        android:background="@drawable/button_whiteborder"
+        android:paddingHorizontal="5dp"
+        android:backgroundTint="@color/transparent_black"/>
+
+
+    <Button
+        android:id="@+id/valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="80dp"
+        android:text="Valider"
+        android:background="@drawable/button_whiteborder"
+        android:backgroundTint="@color/transparent_black"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+1;Musaraignes;musaraigne;5;0;0;0;0;0;0;0;0;0
+2;Taupe;taupe;5;0;0;0;0;0;0;0;0;0
+3;Herisson;herisson;5;0;0;0;0;0;0;0;0;0
+4;Ragondin;ragondin;5;0;1;0;0;0;0;0;0;0
+5;Castor;castor;5;0;1;0;0;0;0;0;0;0
+6;Ecureuil;ecureuil;5;1;0;1;0;0;0;0;0;0
+7;Marmotte;marmotte;5;1;0;1;0;0;0;0;0;0
+8;Rat;rat;5;1;0;0;0;0;0;0;0;0
+9;Mulot;mulot;5;1;0;0;0;0;0;0;0;0
+10;Petit Campagnol;campagnol_small;5;1;0;0;0;0;0;0;0;0
+11;Grand Campagnol;campagnol_big;5;1;0;0;0;0;0;0;0;0
+12;Rat Musque;rat_musque;5;1;0;0;0;0;0;0;0;0
+13;Loir;loir;5;1;0;0;0;0;0;0;0;0
+14;Lerot;lerot;5;1;0;0;0;0;0;0;0;0
+15;Muscardin;muscardin;5;1;0;0;0;0;0;0;0;0
+16;Lapin;lapin;4;0;0;0;0;0;0;0;0;0
+17;Lievre;lievre;4;0;0;0;0;0;0;0;0;0
+18;Chien;chien;0;0;0;0;4;1;0;0;0;0
+19;Renard;renard;0;0;0;0;4;1;0;0;0;0
+20;Loup;loup;0;0;0;0;4;1;0;0;0;0
+21;Chat Domestique;chat_domestic;0;0;0;0;4;0;0;0;0;0
+22;Chat Sauvage;chat_sauvage;0;0;0;0;4;0;0;0;0;0
+23;Ours;ours;0;0;0;0;5;1;0;0;0;0
+24;Blaireau;blaireau;0;0;0;0;5;1;0;0;0;0
+25;Loutre;loutre;0;0;0;0;5;1;0;0;0;0
+26;Martre;martre;0;0;0;0;5;1;0;0;0;0
+27;Fouine;fouine;0;0;0;0;5;1;0;0;0;0
+28;Vison;vison;0;0;0;0;5;1;0;0;0;0
+29;Putois;putois;0;0;0;0;5;1;0;0;0;0
+30;Hermine;hermine;0;0;0;0;5;1;0;0;0;0
+31;Belette;belette;0;0;0;0;5;1;0;0;0;0
+32;Genette;genette;0;0;0;0;5;0;0;0;0;0
+33;Chevreuil;chevreuil;0;0;0;0;0;0;2;0;0;0
+34;Daim;daim;0;0;0;0;0;0;2;0;0;0
+35;Cerf;cerf;0;0;0;0;0;0;2;0;0;0
+36;Mouton;mouton;0;0;0;0;0;0;2;0;1;0
+37;Mouflon;mouflon;0;0;0;0;0;0;2;0;1;0
+38;Chevre;chevre;0;0;0;0;0;0;2;0;1;0
+39;Chamois;chamois;0;0;0;0;0;0;2;1;0;0
+40;Bouquetin;bouquetin;0;0;0;0;0;0;2;1;0;0
+41;Cheval;cheval;0;0;0;0;0;0;1;0;0;0
+42;Vache;vache;0;0;0;0;0;0;2;0;0;1
+43;Ane;ane;0;0;0;0;0;0;1;0;0;0
+44;Sanglier;sanglier;0;0;0;0;0;0;4;0;0;0
+45;Porc;porc;0;0;0;0;0;0;4;0;0;0

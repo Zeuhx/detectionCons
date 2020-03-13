@@ -1,0 +1,4 @@
+autre
+dessin
+feuille_valide
+feuilles_sol_foret

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EyeTrek</string>
+    <string name="link_signup"><u>Pas de compte ? Inscrivez-vous !</u></string>
+    <string name="link_signin"><u>Déjà un compte ? Connectez-vous !</u></string>
+    <string name="link_proposition"><u>Voir mes propositions</u></string>
+    <string name="seconnecter_text">Se connecter</string>
+    <string name="sinscrire_text">S\'inscrire</string>
+    <string name="connexion">Connexion</string>
+    <string name="inscription">Inscription</string>
+    <string name="password">Mot de passe</string>
+    <string name="profil_text">Profil</string>
+    <string name="analyse_text">Analyse</string>
+    <string name="menu_text">Menu</string>
+    <string name="recherche_text">Recherche</string>
+    <string name="switch_text_photo">Photo</string>
+    <string name="switch_text_video">Vidéo</string>
+    <string name="text_bouton_next">Continuer</string>
+    <string name="no_data_available">Aucun analyse n\'est présente</string>
+
+    <!-- Texte qui explique à l'utilisateur, l'extraction d'image dans une vidéo -->
+    <string name="dialog_video">C\'est simple, il vous suffit de choisir le moment où la feuille
+                                est sous son meilleur angle\n\nAppuyez sur le bouton pause pour stopper
+                                la vidéo et cliquez sur continuer</string>
+
+    <!-- Texte qui explique à l'utilisateur, l'extraction de vidéo -->
+    <string name="dialog_edit">C\'est simple, il vous suffit de placer les deux curseurs en début et fin de
+                                la partie à extraire (durée max : 10s)\n\nLa vidéo originale ne sera pas modifiée</string>
+
+
+    <!-- Texte pour le message lorsque l'utilisateur refuse la demande d'accès à la caméra -->
+    <string name="titre"><b>Des permissions sont requises.</b></string>
+    <string name="description">Pour profiter pleinement de l\'application :\nVeuillez accorder les permissions dans vos <b>paramètres</b> </string>
+    <string name="texte_bouton_analyse_feuille" />
+    <string name="texte_bouton_analyse_chants_oiseaux" />
+    <string name="texte_bouton_analyse_champignons" />
+    <string name="texte_bouton_analyse_trace_pattes" />
+    <string name="texte_bouton_securite_champignons" />
+    <string name="texte_bouton_premiers_secours" />
+    <string name="texte_titre_premiers_secours" />
+    <string name="texte_ps_securiser_lieu_accident_titre" />
+    <string name="texte_ps_securiser_lieu_accident_texte" />
+    <string name="texte_ps_etat_victime_titre" />
+    <string name="texte_ps_etat_victime_texte" />
+    <string name="texte_ps_demander_aide_titre" />
+    <string name="texte_ps_demander_aide_texte" />
+    <string name="texte_ps_gestes_titre" />
+    <string name="bouton_geste_arret_cardiaque" />
+    <string name="bouton_geste_saignement" />
+    <string name="bouton_geste_fracture" />
+    <string name="bouton_geste_etouffement" />
+    <string name="texte_titre_arret_cardiaquee" />
+    <string name="texte_titre_arret_cardiaque" />
+    <string name="texte_massage_cardiaque" />
+    <string name="texte_titre_saignement" />
+    <string name="texte_saignement_plaie_simple" />
+    <string name="titre_saignement_plaie_simple" />
+    <string name="titre_saignement_plaie_grave" />
+    <string name="texte_saignement_plaie_grave" />
+    <string name="texte_titre_fracture" />
+    <string name="titre_fracture_ouverte" />
+    <string name="texte_fracture_ouverte" />
+    <string name="titre_fracture_bras" />
+    <string name="texte_fracture_bras" />
+    <string name="titre_fracture_jambe" />
+    <string name="texte_fracture_jambe" />
+    <string name="titre_fracture_entorse" />
+    <string name="texte_fracture_entorse" />
+    <string name="texte_titre_etouffement" />
+    <string name="titre_etouffement_intervention" />
+    <string name="texte_etouffement_intervention" />
+    <string name="titre_etouffement_claques_dos" />
+    <string name="texte_etouffement_claques_dos" />
+    <string name="titre_etouffement_compression_abdo" />
+    <string name="texte_etouffement_compression_abdo" />
+    <string name="texte_titre_securite_champignons" />
+    <string name="texte_sc_avertissement" />
+    <string name="sc_titre_cueillette" />
+    <string name="sc_texte_cueillette" />
+    <string name="sc_titre_consommation" />
+    <string name="sc_texte_consommation" />
+    <string name="sc_titre_intoxication" />
+    <string name="sc_texte_intoxication" />
+    <string name="sc_source" />
+    <string name="texte_bouton_especes_proches" />
+    <string name="dialog_mushrooms" />
+    <string name="bouton_wikipedia" />
+    <string name="bouton_sinstrire" />
+    <string name="bouton_sinscrire" />
+    <string name="aucune_description" />
+    <string name="telechargement_modeles_impossible" />
+    <string name="dialog_no_space_for_models" />
+    <string name="dialog_nn_manquant" />
+</resources>

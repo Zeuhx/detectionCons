@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="descartes.info.l3ag2.eyetrek.activity.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray">
+
+        <Button
+            android:id="@+id/btn_info"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_info_outline_black_32dp"
+            android:layout_alignRight="@id/btn_maj"
+            android:layout_marginTop="40dp"
+            />
+
+
+        <TextView
+            android:id="@+id/versionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"/>
+        <Button
+            android:id="@+id/btn_maj"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Mise à jour"
+            android:background="@drawable/button_whiteborder"
+            android:backgroundTint="@color/transparent_gray"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/btn_annuler"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="REPORTER"
+            android:background="@drawable/button_whiteborder"
+            android:backgroundTint="@color/transparent_gray"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn_maj"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

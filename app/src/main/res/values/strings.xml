@@ -1,0 +1,412 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">EyeTrek</string>
+    <string name="link_signup"><u>Pas de compte ? Inscrivez-vous !</u></string>
+    <string name="link_signin"><u>Déjà un compte ? Connectez-vous !</u></string>
+    <string name="link_proposition"><u>Voir mes propositions</u></string>
+    <string name="seconnecter_text">Se connecter</string>
+    <string name="sinscrire_text">S\'inscrire</string>
+    <string name="connexion">Connexion</string>
+    <string name="inscription">Inscription</string>
+    <string name="password">Mot de passe</string>
+    <string name="profil_text">Profil</string>
+    <string name="analyse_text">Analyse</string>
+    <string name="menu_text">Menu</string>
+    <string name="recherche_text">Recherche</string>
+    <string name="switch_text_photo">Photo</string>
+    <string name="switch_text_video">Vidéo</string>
+    <string name="text_bouton_next">Continuer</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="no_data_available">Aucun analyse n\'est présente</string>
+
+    <!-- Texte qui explique à l'utilisateur, l'extraction d'image dans une vidéo -->
+    <string name="dialog_video">C\'est simple, il vous suffit de choisir le moment où la feuille
+                                    est sous son meilleur angle\n\nAppuyez sur le bouton pause pour stopper
+                                    la vidéo et cliquez sur continuer</string>
+
+    <!-- Texte qui explique à l'utilisateur, l'extraction de vidéo -->
+    <string name="dialog_edit">C\'est simple, il vous suffit de placer les deux curseurs en début et fin de
+                                    la partie à extraire (durée max : 10s)\n\nLa vidéo originale ne sera pas modifiée</string>
+
+
+    <!-- Texte pour le message lorsque l'utilisateur refuse la demande d'accès à la caméra -->
+    <string name="titre"><b>Des permissions sont requises.</b></string>
+    <string name="description">Pour profiter pleinement de l\'application :\nVeuillez accorder les permissions dans vos <b>paramètres</b> </string>
+    <string name="dialog_wait">Ne bougez pas !</string>
+    <string name="texte_bouton_analyse_feuille">Analyse de feuilles</string>
+    <string name="texte_bouton_analyse_chants_oiseaux">Analyse chants d\'oiseaux</string>
+    <string name="texte_bouton_analyse_champignons">Analyse de champignons</string>
+    <string name="texte_bouton_analyse_trace_pattes">Analyse trace de pattes</string>
+    <string name="texte_bouton_securite_champignons">Conseils de sécurité pour les champignons</string>
+    <string name="texte_bouton_premiers_secours">Premiers secours</string>
+    <string name="texte_titre_premiers_secours">Premiers secours</string>
+    <string name="texte_ps_securiser_lieu_accident_titre">\n1. SÉCURISEZ LE LIEU DE L\'ACCIDENT ET LES PERSONNES IMPLIQUÉES</string>
+    <string name="texte_ps_securiser_lieu_accident_texte">Evaluez les conditions de sécurité et vérifiez qu\'il n\'existe aucun danger supplémentaire (terrain, saleté, insectes...).\n</string>
+    <string name="texte_ps_etat_victime_titre">2. APPRÉCIEZ L\'ÉTAT DE LA VICTIME</string>
+    <string name="texte_ps_etat_victime_texte">Présentez-vous et expliquez à la victime ce que vous allez faire afin de la rassurer. Vérifiez qu\'elle est consciente et respire normalement. Le pronostic vital est souvent en jeu en cas d\'altération de la conscience ou de la respiration. Ces éléments seront à transmettre aux secours.\n</string>
+    <string name="texte_ps_demander_aide_titre">3. DEMANDEZ DE L\'AIDE</string>
+    <string name="texte_ps_demander_aide_texte">
+        Si vous avez besoin d\'aide, alertez les services d\'urgence :\n
+        - Le 18 : les sapeurs-pompiers pour tout problème de secours, notamment accident, incendie.\n
+        - Le 15 : le Samu pour tout problème urgent de santé, c\'est un secours médicalisé.\n
+        - Le 17 : la police ou la gendarmerie pour tout problème de sécurité ou d\'ordre public.\n
+        - Le 112 : numéro d\'appel unique des urgences sur le territoire européen, recommandé aux étrangers circulant en France et aux Français circulant à l\'étranger.\n
+        - Le 115 : le Samu social pour toute personne qui présente une détresse sociale comme les personnes sans domicile ou sans abri et exposées aux intempéries.\n
+    </string>
+    <string name="texte_ps_gestes_titre">4. EFFECTUEZ LES GESTES DE PREMIERS SECOURS</string>
+    <string name="bouton_geste_arret_cardiaque">Arrêt cardiaque ou respiratoire</string>
+    <string name="bouton_geste_saignement">Saignement</string>
+    <string name="bouton_geste_fracture">Fracture ou entorse</string>
+    <string name="bouton_geste_etouffement">Etouffement</string>
+    <string name="texte_titre_arret_cardiaque">Arret cardiaque</string>
+    <string name="texte_massage_cardiaque">
+        Lorsque la victime incoscientee ne respire plus et ne reagit plus, elle est en arret cardiaque.\n
+        \n
+        Il faut immédiatement commencr les compressions thoraciques:\n
+        \n
+        - Se placer à genoux au plus près du thorax de la victime.\n
+        - Pour un adulte, placeer le talon d\'une mainsur la moitié inférieure du sternum (milieu de la poitrine) sans appuyer su l\'appendice xiphoide.\n
+        - Placer l\'autre main au dessus de la première en entrelacant les doigts\n
+        - Réaliser 30 comprerssions thoraciques d\'envion 5 centimètres suivit de 2 insufflations par méthode orale.\n
+        - Alterner compression thoracique et inssuflations jusqu\'à l\'arrivée des secours, la reprise des mouvements ou la reprise de la respiration de la victime.\n
+    </string>
+    <string name="texte_titre_saignement">Saignement</string>
+    <string name="titre_saignement_plaie_simple">\nPLAIE SIMPLE</string>
+    <string name="texte_saignement_plaie_simple">
+        Pour une plaie simple (petite coupure, ou petite éraflure):\n
+        - Nettoyer la plaie\n
+        - Appliquer une solution antiseptique sur la plaie (ex: Dakin)\n
+        - Placer un pansement sur la plaie.\n
+    </string>
+    <string name="titre_saignement_plaie_grave">PLAIE GRAVE</string>
+    <string name="texte_saignement_plaie_grave">
+        Attention : Ne jamais retirer un corps étranger d’une plaie.\n
+        \n
+        Lorsque le sang gicle ou coule de façon continue de la plaie, une pression doit être exercée directement sur celle-ci afin d\'arrêter le saignement.\n
+        \n
+        1. Eviter, si possible, tout contact avec le sang de la victime : demandez-lui de comprimer elle-même sa blessure.\n
+        \n
+        2. Sinon, exercez une pression directement sur la plaie avec vos mains protégées (gants jetables, sac plastique ou linge).\n
+        \n
+        3. Allongez la victime en position horizontale.\n
+        \n
+        4. Demandez à une personne présente d’alerter les secours ou faites-le vous-même si vous êtes seul.\n
+        \n
+        5. Si la plaie continue de saigner, comprimez-la encore plus fermement.\n
+        \n
+        6. Poursuivez la compression sur la plaie jusqu’à l’arrivée des secours.\n
+        \n
+        7. Si vous devez vous libérer (par exemple pour aller donner l\'alerte), appliquez un tampon relais pour remplacer votre compression manuelle.\n
+        \n
+        8. Lavez vous les mains après avoir effectué ces premiers secours.\n
+    </string>
+    <string name="titre_saignement_tampon">MISE EN PLACE D\’UN TAMPON RELAIS</string>
+    <string name="texte_saignement_tampon">
+        1. Le tissu mis à la place de la main doit être propre et recouvrir complètement la plaie qui saigne.\n
+        \n
+        2. La substitution de la compression manuelle par le tampon relais doit être effectuée le plus rapidement possible.\n
+        \n
+        3. Le lien appliqué sur le tampon doit être assez large pour le recouvrir entièrement et assez long pour faire au moins 2 fois le tour du membre blessé.\n
+        \n
+        4. Le lien doit être suffisamment serré pour presser sur l\'endroit qui saigne et éviter que le saignement ne reprenne.\n
+        \n
+        5. Si le tampon relais n\'arrête pas totalement l\'hémorragie, posez un second tampon, posé sur le premier pour augmenter la compression.\n
+        \n
+        6. En cas d\'échec, reprenez la compression manuelle.
+    </string>
+    <string name="texte_titre_fracture">Fracture ou entorse</string>
+    <string name="titre_fracture_ouverte">\nFRACTURE OUVERTE OU FRACTURES MULTIPLES</string>
+    <string name="texte_fracture_ouverte">
+        Contacter les secours le plus rapidement possible et ne pas bouger la victime. Si l’os est visible, le protéger avec des compresses stériles ou un linge propre pour réduire le risque d’infection.\n
+        Ne jamais appuyer directement sur la fracture et ne jamais essayer de remettre l’os dans l’axe.\n
+    </string>
+    <string name="titre_fracture_bras">FRACTURE DU BRAS</string>
+    <string name="texte_fracture_bras">
+        Placer le bras fracturé contre la poitrine et l’entourer en écharpe, avec un tissu noué derrière le cou.lacer le bras fracturé contre la poitrine et l’entourer en écharpe, avec un tissu noué derrière le cou.\n
+    </string>
+    <string name="titre_fracture_jambe">FRACTURE DE LA JAMBE</string>
+    <string name="texte_fracture_jambe">
+        Placer une attelle temporaire (support rigide comme une planchette de bois) de chaque côté de la jambe fracturée et maintenir l’ensemble avec du tissu noué.\n
+        Ne pas serrer trop fort afin d’éviter de créer un effet garrot et d’empêcher la bonne circulation sanguine.\n</string>
+    <string name="titre_fracture_entorse">ENTORSE</string>
+    <string name="texte_fracture_entorse">
+        Mettre de la glace dans un sac plastique, entouré d’un linge propre, et l’appliquer le plus tôt possible sur la zone blessée pendant une quinzaine de minutes. \n
+        La glace atténue la douleur, l’inflammation et l’enflure.\n
+    </string>
+    <string name="texte_titre_etouffement">Etouffement</string>
+    <string name="titre_etouffement_intervention">\n70LES ETAPES D’INTERVENTION</string>
+    <string name="texte_etouffement_intervention">
+        1. La victime ne peut pas répondre (elle secoue éventuellement la tête), mais est consciente.\n
+        \n
+        2. La victime ne peut ni parler, ni respirer, ni tousser. Elle peut émettre des sifflements ou tenter de tousser sans émettre de bruit.\n
+        \n
+        3. Donnez un maximum de 5 claques dans le dos de la victime. Après chaque claque, vérifiez si tout rentre dans l\'ordre.\n
+        \n
+        4. Si les claques dans le dos n\'ont pas d\'effet, effectuez un maximum de 5 compressions abdominales.\n
+        \n
+        5. Si le problème n\'est toujours pas résolu, alternez 5 claques dans le dos et 5 compressions abdominales.\n
+        \n
+        6. Si la victime perd connaissance, posez-la délicatement au sol et alertez immédiatement les secours, puis entreprenez une réanimation cardio-pulmonaire en commençant par effectuer 30 compressions thoraciques.\n
+        \n
+        7. Poursuivez la réanimation jusqu\'à ce que les secours arrivent ou que la victime reprenne une respiration normale.\n
+    </string>
+    <string name="titre_etouffement_claques_dos">LES CLAQUES DANS LE DOS (adulte et enfants de plus de 1 an)</string>
+    <string name="texte_etouffement_claques_dos">
+        Tenez-vous sur le côté et un peu en arrière de la victime.  \n
+        \n
+        Penchez-la vers l\'avant en soutenant sa poitrine d\'une main, ce qui permettra à l\'objet obstruant les voies aériennes de ne pas s\'enfoncer davantage dans la trachée.  \n
+        Administrez un maximum de 5 claques entre les omoplates. \n
+        \n
+        Chaque claque a pour but de provoquer un mouvement de toux permettant de déloger l\'objet.  \n
+        \n
+        Après chaque claque, observez si le corps étranger a été rejeté ou non. Dans l\'affirmative, la victime reprend sa respiration et tousse, et il est inutile de lui donner d\'autres claques dans le dos.\n
+    </string>
+    <string name="titre_etouffement_compression_abdo">LES COMPRESSIONS ABDOMINALES (adulte et enfants de plus de 1 an)</string>
+    <string name="texte_etouffement_compression_abdo">
+        Tenez-vous derrière la victime et placez vos bras autour de la partie supérieure de son abdomen.\n
+        \n
+        Penchez la victime vers l\'avant.\n
+        \n
+        Placez un de vos poings fermés entre le nombril et l\'extrémité inférieure du sternum.\n
+        \n
+        Maintenez votre poing en place à l\'aide de votre autre main. Enfoncez fortement votre poing vers vous et vers le haut. Recommencez ce geste 5 fois au maximum.
+    </string>
+    <string name="texte_titre_securite_champignons">Champignons</string>
+    <string name="texte_sc_avertissement">
+        ATTENTION :\n
+        CETTE APPLICATION NE FOURNIS PAS D’ANALYSES FIABLE DE CHAMPIGNONS !\n
+        NOUS NE SOMMES EN AUCUN CAS RESPONSABLES D’UNE QUELCONQUE INTOXICATION !\n
+    </string>
+    <string name="sc_titre_cueillette">Pour la cueillette :</string>
+    <string name="sc_texte_cueillette">
+        Ne pas ramasser un champignon si vous avez le moindre doute sur son état ou son identification, certains champignons vénéneux hautement toxiques ressemblent beaucoup aux espèces comestibles.\n
+        \n
+        Prendre une photo (en dehors de Eyetrek) de la cueillette, avant cuisson, elle sera utile en cas d’intoxication pour identifier le champignon et décider du tarissement adéquat.\n
+        \n
+        Cueillir uniquement les spécimens en bon état et prélever la totalité du champignon (pied et chapeau), afin de permettre l’identification.\n
+        \n
+        Eviter de cueillir les champignons près des sites pollués (bords de routes, aires industrielles, décharges,) car les champignons concentrent les polluants ; au moindre doute, jeter le champignon.\n
+        \n
+        Déposer les champignons séparément, dans une caisse ou un carton mais jamais dans un sac plastique qui accélère le pourrissement.\n
+        \n
+        Séparer les champignons récoltés, par espèce, car un champignon vénéneux peut contaminer les autres.\n
+        \n
+        Se laver soigneusement les mains après la récolte.\n
+    </string>
+    <string name="sc_titre_consommation">Pour la consommation :</string>
+    <string name="sc_texte_consommation">
+        Ne pas consommer sa récolte avant de l’avoir fait contrôler par un spécialiste en la matière ; les pharmaciens ou les associations et sociétés de mycologie de votre région peuvent être consultés.\n
+        \n
+        Les conserver dans de bonnes conditions au réfrigérateur et les consommer dans les 2 jours au maximum après la cueillette.\n
+        \n
+        Les consommer en quantité raisonnable après une cuisson suffisante, ne jamais les consommer crus et ne pas les proposer aux jeunes enfants.\n
+    </string>
+    <string name="sc_titre_intoxication">EN CAS D’INTOXICATION</string>
+    <string name="sc_texte_intoxication">
+        En cas d’apparition d’un ou plusieurs des symptômes associés à une consommation de champignons de cueillette (tremblements, vertiges, troubles de la vue, nausées, vomissements…) il faut appeler immédiatement un centre antipoison ou le Centre 15.\n
+        \n
+        Les symptômes peuvent apparaître jusqu’à 12 heures après la consommation. Il est utile de noter les heures du ou des derniers repas, l’heure de survenue des premiers signes et de conserver les restes de la cueillette pour identification.\n
+    </string>
+    <string name="sc_source">\nSource: https://solidarites-sante.gouv.fr/sante-et-environnement/denrees-alimentaires/article/prevention-des-intoxications-par-les-champignons\n</string>
+    <string name="texte_bouton_especes_proches">Arbres \n proches</string>
+    <string name="dialog_mushrooms">Certains champignons vénéneux peuvent ressembler à des champignons inoffensifs. Les analyses de l\'application ne sont en aucun cas de confiance.\n\nPour en savoir plus, allez sur la page \"Conseils de sécurité pour les champignons\" depuis le menu.</string>
+    <string name="bouton_wikipedia">Aller sur Wikipedia</string>
+    <string name="bouton_sinscrire">S\'INSCRIRE</string>
+    <string name="aucune_description">Aucune description n\'est disponible pour le moment.</string>
+    <string name="telechargement_modeles_impossible">Le téléchargement des réseaux de neurones n\'a pas pu être effectué</string>
+    <string name="dialog_no_space_for_models">L\'espace disponible dans votre appareil est insuffisant pour télécharger le réseau de neurones permettant l\'analyse de : </string>
+    <string name="dialog_nn_manquant">Le réseau de neurones pour ce type d\'analyse n\'est pas présent sur votre téléphone, vous ne pourrez donc faire d\'analyse qu\'avec du réseau.</string>
+    <string name="oiseaux">Oiseaux :</string>
+    <string name="oiseaux_rank">oiseaux</string>
+    <string name="rank_feuilles">feuilles</string>
+    <string name="rank_champignons">champignons</string>
+    <string name="scores_et_classement">Scores et Classement</string>
+    <string name="score_feuilles">Feuilles :</string>
+    <string name="score_champignon">Champignons :</string>
+
+
+    <!-- Textes d'un morceeau d'application récupérée pour la conveersion de fichier wav en Bitmap de son spectrogramme -->
+    <string name="action_settings">Réglages</string>
+    <string name="title_activity_spectro">Spectrogram</string>
+    <string name="library">Library</string>
+    <string name="record">Record</string>
+    <string name="settings">Settings</string>
+    <string name="pref_colourmap">Spectrogram colour map</string>
+    <string name="pref_colourmap_default">0</string>
+    <string name="pref_landscape">Lock landscape orientation</string>
+    <string name="resume_desc">Resume scrolling</string>
+    <string name="pref_contrast">Spectrogram contrast</string>
+    <string name="pref_contrast_summary">Adjust spectrogram contrast/sensitivity</string>
+    <string name="pref_contrast_default">0.5</string>
+    <string name="pref_contrast_message">Slide to the right to increase contrast and reduce amplitude sensitivity, or to the left to increase sensitivity but reduce contrast.</string>
+    <string name="pref_sample_rate_default">16000</string>
+    <string name="pref_sample_rate">Sample rate</string>
+    <string name="pref_samples_window">Samples per window</string>
+    <string name="pref_samples_window_default">300</string>
+    <string name="pref_audio_data_title">Audio data</string>
+    <string name="pref_display_title">Display</string>
+    <string name="pref_captured_audio_title">Captured audio</string>
+    <string name="pref_overfilter">Overfilter audio captures</string>
+    <string name="pref_overfilter_summary">Automatically overfilter audio clips before they are saved to disk</string>
+    <string name="mode_Astro">Analyse Constellation</string>
+    <string name="navigation_open_drawer">Open navigation_Drawer</string>
+    <string name="navigation_close_drawer">Close navigation_Drawer</string>
+
+
+
+    <!-- MODE ASTRO -->
+    <string name="analyse_Constellation">Analyse des constellations</string>
+    <string name="title_activity_connexion_astro">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_login_astro">Sign in</string>
+
+    <string-array name="constellations_titles">
+
+        <item>Andromède</item>
+
+        <item>Bélier</item>
+        <item>Bouvier</item>
+
+        <item>Cancer</item>
+        <item>Cassiopée</item>
+        <item>Céphée</item>
+        <item>Chevelure de Bérénice</item>
+        <item>Chiens de chasse</item>
+        <item>Cocher</item>
+        <item>Couronne Boréale</item>
+        <item>Cygne</item>
+
+        <item>Dauphin</item>
+        <item>Dragon</item>
+
+        <item>Flèche</item>
+
+        <item>Gémeaux</item>
+        <item>Girafe</item>
+        <item>Grande ourse</item>
+
+        <item>Hercule</item>
+
+        <item>Lézard</item>
+        <item>Licorne</item>
+        <item>Lion</item>
+        <item>Lynx</item>
+        <item>Lyre</item>
+
+        <item>Orion</item>
+
+        <item>Pégase</item>
+        <item>Persée</item>
+        <item>Petit Cheval</item>
+        <item>Petit Chien</item>
+        <item>Petit Lion</item>
+        <item>Petit Ours</item>
+        <item>Petit Renard</item>
+        <item>Poisson</item>
+
+        <item>Serpent</item>
+        <item>Sextant</item>
+        <item>Taureau</item>
+        <item>Triangle</item>
+
+
+    </string-array>
+
+    <string-array name="constellations_info">
+
+        <item>Andromède est une constellation de l\'hémisphère nord. Longue, en forme de « A », Andromède fut l\'une des 48 constellations identifiées par Ptolémée.</item>
+
+        <item>Le Bélier (Aries) est une constellation du zodiaque qui est traversée par le Soleil du 19 avril au 14 mai. Dans l\'ordre du zodiaque, la constellation se situe entre les Poissons à l\'ouest et le Taureau à l\'est.</item>
+
+        <item>Le Bouvier est une constellation boréale. Ses étoiles principales dessinent dans le ciel un grand cerf-volant (ou un parachute).</item>
+
+        <item>Le Cancer est une constellation du zodiaque traversée par le Soleil du 20 juillet au 10 août. Dans l\'ordre du zodiaque, il se situe entre les Gémeaux à l\'ouest et le Lion à l\'est.</item>
+
+        <item>Cassiopée est une des 88 constellations du ciel, visible dans l\'hémisphère nord. C\'est une constellation circumpolaire, très facilement reconnaissable grâce à sa forme de « W ».</item>
+        <item>Céphée est une constellation circumpolaire de l\'hémisphère nord. Elle est reconnaissable à sa forme de pentagone irrégulier, ou de dessin enfantin d\'une maison à toit pointu.</item>
+        <item>La Chevelure de Bérénice est un ancien astérisme du ciel boréal qui a été défini comme l\'une des 88 constellations modernes. Elle est localisée entre le Lion à l\'ouest et le Bouvier à l\'est, et est visible des deux hémisphères.</item>
+        <item>Les Chiens de chasse sont une petite constellation boréale sans étoile particulièrement brillante.</item>
+        <item>Le Cocher (Auriga en latin) est une constellation de l\'hémisphère nord, parfois aussi appelée Érichton.</item>
+        <item>La Couronne boréale est une petite constellation de l\'hémisphère nord. Elle est effectivement formée d\'étoiles disposées en un arc-de-cercle, l\'étoile centrale, α Coronae Borealis (Alphecca), étant la plus brillante et formant le diadème.</item>
+        <item>Le Cygne est une grande et brillante constellation, parfois appelée la Croix du nord (en référence à la Croix du Sud) car ses étoiles sont principalement disposées selon une grande croix.</item>
+        <item>Le Dauphin est une petite constellation de l\'hémisphère nord, proche de l\'équateur céleste.</item>
+        <item>Le Dragon (Draco) est une des 88 constellations du ciel, la huitième par la taille. Elle est composée d\'une longue suite d\'étoiles qui longe une partie de la Petite Ourse.</item>
+        <item>La Flèche est une constellation de l\'hémisphère nord, la troisième plus petite du ciel (seuls la Croix du Sud et le Petit Cheval sont plus petits).</item>
+        <item>Les Gémeaux sont une constellation du zodiaque traversée par le Soleil du 21 juin au 20 juillet. Dans l\'ordre du zodiaque, la constellation se situe entre le Taureau à l\'ouest et le Cancer à l\'est.</item>
+        <item>La Girafe est une constellation assez étendue mais peu lumineuse de l\'hémisphère nord.</item>
+        <item>La Grande Ourse est la troisième constellation du ciel par son étendue. Elle contient la « grande casserole » (ou « grand chariot »), l\'un des astérismes les plus connus de l\'hémisphère nord.</item>
+        <item>Hercule est une vaste constellation de l\'hémisphère nord, la cinquième plus grande de la voûte céleste.</item>
+        <item>Le Lézard est une petite constellation de l\'hémisphère nord, située entre Andromède, Cassiopée et le Cygne.</item>
+        <item>La Licorne est une constellation moderne relativement peu lumineuse; située quelques degrés au-dessus de l\'équateur céleste, elle est visible depuis une grande partie du globe terrestre, à l\'exception des pôles.</item>
+        <item>Le Lion est une constellation du zodiaque traversée par le Soleil du 10 août au 16 septembre. Dans l\'ordre du zodiaque, cette constellation se situe entre le Cancer à l\'ouest et la Vierge à l\'est.</item>
+        <item>Le Lynx est une constellation de l\'hémisphère nord située au sud et à l\'ouest de la Grande Ourse.</item>
+        <item>La Lyre est une des 88 constellations. Elle se situe dans l\'hémisphère nord. Notre étoile tend progressivement à se rapprocher des étoiles qui composent cette constellation1.</item>
+        <item>Orion (« le Chasseur ») est une constellation située quasiment sur l\'équateur céleste.</item>
+        <item>Pégase est une constellation de l\'hémisphère nord, située au sud d\'Andromède, au nord des Poissons et au nord-ouest du Verseau. C\'est la septième constellation du ciel par la taille (1 121 degrés2).</item>
+        <item>Persée est une constellation de l\'hémisphère nord. Relativement grande, elle possède plusieurs étoiles brillantes, dont l\'étoile variable Algol (β Persei).</item>
+        <item>Le Petit Cheval est une constellation de l\'hémisphère nord, la plus petite de cet hémisphère. Seule la Croix du Sud dans l\'hémisphère sud est moins étendue.</item>
+        <item>Le Petit Chien (Canis Minor) est l\'une des 88 constellations modernes, une petite constellation de l\'hémisphère nord. Elle était déjà présente dans la liste de 48 constellations établie par Ptolémée au IIe siècle. On dit qu\'elle représente un des chiens qui suit Orion.</item>
+        <item>Le Petit Lion est une constellation de l\'hémisphère nord. Comme beaucoup d\'autres constellations modernes, elle ne comporte que peu d\'étoiles vraiment lumineuses. En fait, six d\'entre elles seulement dépassent la magnitude apparente 5.</item>
+        <item>La Petite Ourse, ou en latin Ursa Minor et abrégé UMi, est une constellation de l\'hémisphère céleste nord.</item>
+        <item>Le Petit Renard est une constellation de l\'hémisphère nord située au milieu du Triangle d\'été, un astérisme constitué des étoiles Alpha Cygni (Deneb), Alpha Lyrae (Vega) et Alpha Aquilae (Altaïr). Cette constellation ne possède pas d\'étoiles plus brillantes que la 4e magnitude.</item>
+        <item>Les Poissons sont une constellation du zodiaque traversée par le Soleil du 12 mars au 18 avril. Dans l\'ordre du zodiaque, elle se situe entre le Verseau à l\'ouest et le Bélier à l\'est.</item>
+        <item>Le Serpent est une constellation qui représente le serpent dompté par Ophiuchus, le Serpentaire.</item>
+        <item>Le Sextant est une constellation très peu lumineuse. Située sur l\'équateur céleste, elle peut être vue quasiment de n\'importe quelle latitude, sauf aux pôles.</item>
+        <item>Le Taureau est une constellation du zodiaque traversée par le Soleil du 14 mai au 22 juin. Dans l\'ordre du zodiaque, la constellation se situe entre le Bélier à l\'ouest et les Gémeaux à l\'est. Le Taureau était l\'une des 48 constellations identifiées par Ptolémée.</item>
+        <item>Le Triangle est une petite constellation de l\'hémisphère nord dont les trois étoiles principales forment justement un triangle allongé.</item>
+
+
+    </string-array>
+
+
+    <string-array name="constellations_images">
+
+        <item>astro_1_andromeda</item>
+        <item>astro_2_aries</item>
+        <item>astro_3_bootes</item>
+        <item>astro_4_cancer</item>
+        <item>astro_5_cassiopeia</item>
+        <item>astro_6_cepheus</item>
+        <item>astro_7_comaberenices</item>
+        <item>astro_8_canesvenatici</item>
+        <item>astro_9_auriga</item>
+        <item>astro_10_coronaborealis</item>
+        <item>astro_11_cygnus</item>
+        <item>astro_12_delphinus</item>
+        <item>astro_13_draco</item>
+        <item>astro_14_sagitta</item>
+        <item>astro_15_gemini</item>
+        <item>astro_16_camelopardalis</item>
+        <item>astro_17_ursamajor</item>
+        <item>astro_18_hercules</item>
+        <item>astro_19_lacerta</item>
+        <item>astro_20_monoceros</item>
+        <item>astro_21_leo</item>
+        <item>astro_22_lynx</item>
+        <item>astro_23_lyra</item>
+        <item>astro_24_orion</item>
+        <item>astro_25_pegasus</item>
+        <item>astro_26_perseus</item>
+        <item>astro_27_equuleus</item>
+        <item>astro_28_canisminor</item>
+        <item>astro_29_leominor</item>
+        <item>astro_30_vulpecula</item>
+        <item>astro_31_ursaminor</item>
+        <item>astro_32_pisces</item>
+        <item>astro_33_serpens</item>
+        <item>astro_34_sextans</item>
+        <item>astro_35_taurus</item>
+        <item>astro_36_triangulum</item>
+
+
+
+
+    </string-array>
+
+</resources>

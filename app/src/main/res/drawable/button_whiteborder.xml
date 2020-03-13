@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Source: https://android-code.blogspot.fr/2015/01/android-button-transparent-background_12.html -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <!--apply button background transparent, full opacity-->
+            <solid android:color="#00ffffff"/>
+            <!--make button border solid color, nontransparent-->
+            <stroke android:color="#FFF" android:width="2dp"/>
+            <corners android:radius="2dp"/>
+        </shape>
+    </item>
+</selector>

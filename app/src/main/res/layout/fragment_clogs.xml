@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_animals">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Empreintes Sabots"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@color/transparent_black"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="44dp"
+        android:paddingVertical="10dp"/>
+
+    <ImageButton
+        android:id="@+id/cancel"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/ic_bouton_annuler_32dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="22dp"
+        />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupeNbSabot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="@color/transparent_gray"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="40dp">
+
+        <RadioButton
+            android:id="@+id/radio_Paire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Paire"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+
+        <RadioButton
+            android:id="@+id/radio_Impaire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Mono"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupeNbSabot"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/groupe_img1">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/footprint_4"
+            android:id="@+id/img_footprint1"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/footprint_6"
+            android:layout_toEndOf="@id/img_footprint1"
+            android:layout_marginStart="50dp"
+            />
+
+    </RelativeLayout>
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupeDoigt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/groupe_img1"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="@color/transparent_gray"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="40dp">
+
+        <RadioButton
+            android:id="@+id/radio_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="4 Doigts"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+
+        <RadioButton
+            android:id="@+id/radio_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="2 doigts"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+    </RadioGroup>
+
+
+    <RelativeLayout
+        android:id="@+id/stock_img2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupeDoigt"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/img_footprint4"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:background="@drawable/footprint_7"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/footprint_10"
+            android:layout_toEndOf="@id/img_footprint4"
+            android:layout_marginStart="40dp"/>
+
+    </RelativeLayout>
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupeForme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/stock_img2"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="@color/transparent_gray"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="40dp">
+
+        <RadioButton
+            android:id="@+id/radio_circulaire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Circulaire"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+
+        <RadioButton
+            android:id="@+id/radio_concave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Concave"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+
+        <RadioButton
+            android:id="@+id/radio_convexe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Convexe"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="70dp"
+        android:text="Réinitisaliser"
+        android:background="@drawable/button_whiteborder"
+        android:paddingHorizontal="5dp"
+        android:backgroundTint="@color/transparent_black"/>
+
+
+    <Button
+        android:id="@+id/valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="80dp"
+        android:text="Valider"
+        android:background="@drawable/button_whiteborder"
+        android:backgroundTint="@color/transparent_black"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu>
+<item android:id="@+id/parametre_button_asto_mode"
+    android:title="@string/action_settings"
+    android:icon="@drawable/bouton_parametre"
+    app:showAsAction="always"
+    android:orderInCategory="100"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+<menu>
+    <item
+        android:id="@+id/Regler_son"
+        android:icon="@drawable/ic_profil_black_24dp"
+        android:title="Regler le son"
+        app:showAsAction=""/>
+
+    <item
+        android:id="@+id/Regler_luminosité"
+        android:icon="@drawable/ic_analyse_black_24dp"
+        android:title="Regler la luminosité" />
+
+</menu>
+
+</item>
+
+</menu>

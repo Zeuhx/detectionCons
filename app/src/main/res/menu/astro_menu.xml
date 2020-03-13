@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profilNav"
+            android:icon="@drawable/acer_pseudoplatanus"
+            android:title="Profil" />
+    </group>
+
+    <item android:title="Catalogues">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/catalogconsNav"
+                    android:icon="@drawable/ic_bouton_record_60dp"
+                    android:title="Catalogue des constellations" />
+                <item
+                    android:id="@+id/catalogstarNav"
+                    android:icon="@drawable/ic_bouton_record_60dp"
+                    android:title="Catalogue des étoiles" />
+            </group>
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/logoutfromAstroNav"
+            android:icon="@drawable/acer_pseudoplatanus"
+            android:title="Se deconnecter" />
+    </group>
+
+</menu>

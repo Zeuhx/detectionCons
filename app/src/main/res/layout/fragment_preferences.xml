@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="descartes.info.l3ag2.eyetrek.fragment.FragmentPreferences">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Switch
+        android:id="@+id/didacticiel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:text="Didacticiel    "
+        android:drawableTint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_lightbulb_outline_black_24dp"
+        />
+    <TextView
+        android:id="@+id/didacticiel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        />
+    </LinearLayout>
+</FrameLayout>

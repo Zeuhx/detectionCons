@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fragement_astro_navHeaderHeight">160</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="stillshot_widget_spacing">10dp</dimen>
+    <dimen name="stillshot_widget_margin_sides">4dp</dimen>
+    <dimen name="stillshot_widget_margin_sides_bottom">10dp</dimen>
+    <dimen name="stillshot_widget_margin_top">10dp</dimen>
+    <dimen name="stillshot_widget_margin_bottom">4dp</dimen>
+    <dimen name="cam_widget_margin_bottom">20dp</dimen>
+
+    <dimen name="cam_content_inset_secondary">10dp</dimen>
+
+
+</resources>

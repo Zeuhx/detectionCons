@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="descartes.info.l3ag2.eyetrek.fragment.FragmentVisualisationAudio">
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent_black"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <Button
+            android:id="@+id/bouton_next"
+            android:layout_alignParentEnd="true"
+            android:text="Continuer"
+            android:background="?android:attr/selectableItemBackground"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/ic_bouton_next_54dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/zone_listen"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/background_lecture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/bouton_play"
+            android:background="@drawable/ic_bouton_play_64dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:background="@color/transparent_black"
+        android:layout_height="56dp">
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bouton_annuler"
+            android:background="@drawable/ic_bouton_annuler_32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

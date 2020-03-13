@@ -1,0 +1,36 @@
+Andromède;Andromeda;Ascention droite entre 343,0° et 37,7°;Déclinaison entre 21,0° et 52,5°;Étoile la plus brillante : α And (2,07);Étoile la proche : Ross 248 (10,32 al)
+Bélier;Aries;Ascention droite entre 25,0° et 50,5° ;Déclinaison entre 9,9° et 30,7°;Étoile la plus brillante : α Ari (2,0);Étoile la proche : Teegarden (12,6 al)
+Bouvier;Bootes;Ascention droite entre 202,50° et 236,25°;Déclinaison entre 8,0° et 55,5°;Étoile la plus brillante : α Bootis (-0,04);Étoile la proche : GJ 526 (17,7 al)
+Cancer;Cancer;Ascention droite entre 117,125° et 138,75°;Déclinaison entre 7,0° et 33,5°;Étoile la plus brillante :β Cnc (3,53);Étoile la proche : DX Cancri (11,8 al)
+Cassiopée;Cassiopeia;Ascention droite entre 343,0° et 51,25°;Déclinaison entre 46° et 77°;Étoile la plus brillante :α Cas (2,24);Étoile la proche : η Cas (19,4 al)
+Céphée;Cepheus;Ascention droite entre 300,0° et 120,0°;Déclinaison entre 52,75° et 88,0°;Étoile la plus brillante :	α Cep (2,45);Étoile la proche : Kruger 60 (13,15 al)
+Chevelure de Bérénice;Coma Berenices;Ascention droite entre 11h 58m 25.0885s et 13h 36m 06.9433s1;Déclinaison entre 33.3074303° et 13.3040485°1;étoile la plus brillante :β Com (4,23) ;Étoile la proche :β Com (30 al)
+Chiens de chasse;Canes Venatici;Ascention droite entre 180,0° et 210,5°;Déclinaison entre 28,5° et 53,0°;Étoile la plus brillante : Cor Caroli (2,89);Étoile la proche :
+Cocher;Auriga;Ascention droite entre 67,5° et 110,5°;Déclinaison entre 28° et 56°;Étoile la plus brillante 	Capella (0,08): ;Étoile la proche :
+Couronne boréale;Corona Borealis;Ascention droite entre 227,75° et 245,00°;Déclinaison entre 26° et 40°;Étoile la plus brillante : α CrB (2,22);Étoile la proche :
+Cygne;Cygnus;Ascention droite entre 286,25° et 329,5°;Déclinaison entre 27,5° et 60,9°;Étoile la plus brillante : Deneb (1,25);Étoile la proche : 61 Cyg (11,4 al)
+Dauphin;Delphinus;Ascention droite entre 302,125° et 315,75°;Déclinaison entre 2,0° et 20,5°;Étoile la plus brillante : β Del (3,64);Étoile la proche :
+Dragon;Draco;Ascention droite entre 137,5° et 315,0°;Déclinaison entre 47,5° et 86,0°;Étoile la plus brillante : γ Dra (2,23);Étoile la proche : Struve 2398 (11,5 al)
+Flèche;Sagitta;Ascention droite entre 283° et 303,75°;Déclinaison entre 15,75° et 21,25°;Étoile la plus brillante : γ Sge (3,51);Étoile la proche :
+Gémeaux;Gemini;Ascention droite entre 88,25° et 120°;Déclinaison entre 10° et 35,5°;Étoile la plus brillante : Pollux (1,16);Étoile la proche :
+Girafe;Camelopardalis;Ascention droite entre 46,5° et 217,5°;Déclinaison entre 52,5° et 86,5°;Étoile la plus brillante : β Cam (4,03);Étoile la proche :
+Grande Ourse;Ursa Major;Ascention droite entre 119,5° et 216,25°;Déclinaison entre 29° et 73,5°;Étoile la plus brillante : Alioth (1,76);Étoile la proche :Lalande 21185 (8,29 al)
+Hercule;Hercules;Ascention droite entre 236,25° et 283°;Déclinaison entre 4° et 51,5°;Étoile la plus brillante : β Her (2,78);Étoile la proche :
+Lézard;Lacerta;Ascention droite entre 328,125° et 343°;Déclinaison entre 34,5° et 56,25°;Étoile la plus brillante : α Lac (3,76);Étoile la proche :
+Licorne;Monoceros;Ascention droite entre 87,5° et 121,25°;Déclinaison entre -11° et +12°;Étoile la plus brillante : β Mon (3,76);Étoile la proche : Ét. de Luyten (12,4 al)
+Lion;Leo;Ascention droite entre 138,75° et 178°;Déclinaison entre -6° et 33,5°;Étoile la plus brillante : Régulus (1,36);Étoile la proche :Wolf 359 (7,78 al)
+Lynx;Lynx;Ascention droite entre 91,5° et 143,75°;Déclinaison entre 33,5° et 62°;Étoile la plus brillante : α Lyn (3,14);Étoile la proche :
+Lyre;Lyra;Ascention droite entre 272,625° et 291°;Déclinaison entre 25,5° et 47,5°;Étoile la plus brillante : Véga (0,03);Étoile la proche :
+Orion;Orion;Ascention droite entre 69,2° et 94,6°;Déclinaison entre -11,0° et 22,8°;Étoile la plus brillante : Rigel (0,12);Étoile la proche : π3 Ori (26,3 al)
+Pégase;Pegasus;Ascention droite entre 315,75° et 2,125°;Déclinaison entre 1,75° et 36°;Étoile la plus brillante : ε Peg (2,39);Étoile la proche :
+Persée;Perseus;Ascention droite entre 20,5° et 70,375°;Déclinaison entre 30,7° et 58,5°;Étoile la plus brillante : α Per (1,79);Étoile la proche :
+Petit Cheval;Equuleus;Ascention droite entre 312,5° et 320,0°;Déclinaison entre 2,0° et 12,5°;Étoile la plus brillante : α Equ (3,92);Étoile la proche :
+Petit Chien;Canis Minor;Ascention droite entre 105,0° et 121,25°;Déclinaison entre 0,0° et 13,5°;Étoile la plus brillante : Procyon (0,40);Étoile la proche : Procyon (11,4 al)
+Petit Lion;Leo Minor;Ascention droite entre 138,75° et 165,0°;Déclinaison entre 23,5° et 42,0°;Étoile la plus brillante : 46 LMi (3,79);Étoile la proche :
+Petit Renard;Vulpecula;Ascention droite entre 283,0° et 321,25°;Déclinaison entre 19,17° et 29,0°;Étoile la plus brillante : α Vul (4,44);Étoile la proche :
+Petite Ourse;Ursa Minor;Ascention droite entre 0° et 360°;Déclinaison entre 65,40° et 90°;Étoile la plus brillante : étoile Polaire (1,97);Étoile la proche :
+Poissons;Pisces;Ascention droite entre 341,25° et 30°;Déclinaison entre -7° et 33°;Étoile la plus brillante : η Psc (3,62);Étoile la proche : Ét. de van Maanen (14,1 al)
+Serpent;Serpens;Ascention droite entre 226,25° et 283°;Déclinaison entre -16° et 26°;Étoile la plus brillante : α Ser (2,63);Étoile la proche :
+Sextant;Sextans;Ascention droite entre 143,75° et 161,25°;Déclinaison entre -11° et 7°;Étoile la plus brillante : α Sex (4,48);Étoile la proche :LHS 292 (14,8 al)
+Taureau;Taurus;Ascention droite entre 49,25° et 88,25°;Déclinaison entre -1,75° et 30,67°;Étoile la plus brillante : Aldébaran (0,87);Étoile la proche :
+Triangle;Triangulum;Ascention droite entre 21,125° et 40,75°;Déclinaison entre 25° et 36,75°;Étoile la plus brillante : β Tri (3,00);Étoile la proche :

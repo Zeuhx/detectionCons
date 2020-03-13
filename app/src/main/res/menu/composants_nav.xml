@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="astro">
+<item
+        android:id="@+id/profil_item"
+        android:icon="@drawable/ic_profil_black_24dp"
+        android:title="@string/profil_text" />
+
+    <item
+        android:id="@+id/analyse_item"
+        android:icon="@drawable/ic_analyse_black_24dp"
+        android:title="@string/menu_text" />
+
+    <item
+        android:id="@+id/recherche_item"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/recherche_text" />
+
+</menu>

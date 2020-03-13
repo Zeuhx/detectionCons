@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_animals">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Empreintes Mains"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@color/transparent_black"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="44dp"
+        android:paddingVertical="10dp" />
+
+    <ImageButton
+        android:id="@+id/cancel"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/ic_bouton_annuler_32dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="22dp" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupeNbSabot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="44dp"
+        android:background="@color/transparent_gray">
+
+        <RadioButton
+            android:id="@+id/radio_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5 doigts"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radio_5a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5 doigts arrière"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radio_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4 doigts"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/stock_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupeNbSabot"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:id="@+id/img_footprint1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/footprint_3"/>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/footprint_5" />
+
+
+    </LinearLayout>
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupePalme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/stock_img"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="44dp"
+        android:background="@color/transparent_gray"
+
+        >
+
+        <RadioButton
+            android:id="@+id/radio_Oui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Palmes"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radio_Non"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Non Palmes"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/stock_img2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupePalme"
+
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/img_footprint3"
+            android:layout_width="40dp"
+            android:layout_height="100dp"
+            android:background="@drawable/footprint_8"/>
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/footprint_9" />
+
+    </LinearLayout>
+
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupeForme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/stock_img2"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="44dp"
+        android:background="@color/transparent_gray">
+
+        <RadioButton
+            android:id="@+id/radio_egale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Même taille"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radio_nonegale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Pattess avant
+ plus petites"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="70dp"
+        android:text="Réinitisaliser"
+        android:background="@drawable/button_whiteborder"
+        android:paddingHorizontal="5dp"
+        android:backgroundTint="@color/transparent_black"/>
+
+
+    <Button
+        android:id="@+id/valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="80dp"
+        android:text="Valider"
+        android:background="@drawable/button_whiteborder"
+        android:backgroundTint="@color/transparent_black"/>
+
+
+</RelativeLayout>

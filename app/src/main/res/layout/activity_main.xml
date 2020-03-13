@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="descartes.info.l3ag2.eyetrek.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/contenu_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/barre_navigation"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_gravity="start"
+        app:elevation="10dp"
+        app:itemBackground="@color/ic_launcher_background"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/composants_nav" />
+
+    <!--
+        Attributs à rajouter pour le style des items et de la barre de navigation
+
+            design:itemBackground to set the background of the menu resource
+            design:itemIconTint to set the tint which is applied to the item icons.
+            design:itemTextColor to set the menu item text colour.
+      -->
+
+
+
+</android.support.constraint.ConstraintLayout>
