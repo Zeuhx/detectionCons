@@ -27,6 +27,8 @@ import android.os.StatFs;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 
+import java.io.File;
+
 /**
  * Source GitHub - https://github.com/iPaulPro/aFileChooser
  * @version 2009-07-03
@@ -221,6 +223,23 @@ public class FileUtils {
         }
 
         return null;
+    }
+
+    public static File getFile(Context context, Uri uri) {
+        if (uri != null) {
+            String path = getPath(context, uri);
+            if (path != null && isLocal(path)) {
+                return new File(path);
+            }
+        }
+        return null;
+    }
+
+    public static boolean isLocal(String url) {
+        if (url != null && !url.startsWith("http://") && !url.startsWith("https://")) {
+            return true;
+        }
+        return false;
     }
 
 }

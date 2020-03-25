@@ -8,7 +8,6 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Point;
@@ -31,7 +30,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -53,13 +51,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileDescriptor;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -112,9 +106,6 @@ public class FragmentMenuAstro extends Fragment {
     private Handler myBackgroundHandler;
     private HandlerThread myBackgroundHandlerThread;
     private CameraDevice myCameraDevice;
-
-
-
 
 
     private ImageReader imageReader;
@@ -277,10 +268,9 @@ public class FragmentMenuAstro extends Fragment {
      *  Pour le fragement
      *
      **/
-
     @Nullable
     @Override
-   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_affichage_principale_asto, container, false);
 
         Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolBarAstro);
@@ -354,15 +344,8 @@ public class FragmentMenuAstro extends Fragment {
             Uri uri = null;
             if (resultData != null) {
                 uri = resultData.getData();
-                try {
-                    bitmap = getBitmapFromUri(uri);
-                    // Rappelle le fragment : affiche le contenu du fragment
-                    replaceFragment(Fragment_AstroAffichagePhoto.newInstance(bitmap));
-                } catch (IOException e) {
-                    Log.e(TAG, "Image non chargee depuis le Provider");
-                    e.printStackTrace();
-                }
-
+                // Rappelle le fragment : affiche le contenu du fragment
+                replaceFragment(Fragment_AstroAffichagePhoto.newInstance(uri));
             }
 
             if (requestCode == READ_REQ) {
@@ -416,40 +399,10 @@ public class FragmentMenuAstro extends Fragment {
      * Importation et affichage
      */
     public void readPhoto() {
-
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("image/*");
         startActivityForResult(intent, READ_REQ);
-    }
-
-    // Affichage de l'image
-    private Bitmap getBitmapFromUri(Uri uri) throws IOException {
-        ParcelFileDescriptor parcelFileDescriptor = getContext().getContentResolver().openFileDescriptor(uri, "r"); // juste la lecture
-        FileDescriptor fileDescriptor = parcelFileDescriptor.getFileDescriptor();
-        Bitmap bitmap = BitmapFactory.decodeFileDescriptor(fileDescriptor);
-        parcelFileDescriptor.close();
-        return bitmap;
-    }
-
-    // Lecture d'une image
-    private void readPhotoFile(Uri uri) {
-        InputStream inputStream = null;
-        try {
-            inputStream = getContext().getContentResolver().openInputStream(uri);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    inputStream));
-
-            String line;
-            Log.i("", "Ouverture en cours" + "\n");
-            while ((line = reader.readLine()) != null) {
-                Log.i("", line + "\n");
-            }
-            reader.close();
-            inputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
@@ -471,7 +424,7 @@ public class FragmentMenuAstro extends Fragment {
             {
                 Toast.makeText(getApplicationContext(),"L'appli ne se lance pas sans la cam",Toast.LENGTH_SHORT).show();
     }
-}
+    }
     }*/
 
 
@@ -802,5 +755,6 @@ public class FragmentMenuAstro extends Fragment {
 
         }
     }
+
 }
 

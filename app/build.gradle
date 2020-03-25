@@ -67,6 +67,7 @@ dependencies {
     implementation 'com.github.wendykierp:JTransforms:3.1'
     implementation project(path: ':openCVLibrary342')
     //implementation 'com.google.android.gms:play-services-location:x.y.z'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 
 }
 

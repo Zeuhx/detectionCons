@@ -1,6 +1,7 @@
 package descartes.info.l3ag2.eyetrek.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
@@ -27,13 +28,15 @@ import java.util.Scanner;
 import descartes.info.l3ag2.eyetrek.R;
 import descartes.info.l3ag2.eyetrek.classes.BuildConstellation_Astro;
 import descartes.info.l3ag2.eyetrek.classes.UtilAnalyseImage_Astro;
+import descartes.info.l3ag2.eyetrek.fragment.FragmentConsCatalogDetails;
+import descartes.info.l3ag2.eyetrek.fragment.FragmentLoadingAstro;
 import descartes.info.l3ag2.eyetrek.fragment.FragmentCatalogueCons;
 import descartes.info.l3ag2.eyetrek.fragment.FragmentCatalogueStar;
 import descartes.info.l3ag2.eyetrek.fragment.FragmentMenuAstro;
 import descartes.info.l3ag2.eyetrek.fragment.FragmentProfilAstro;
 import descartes.info.l3ag2.eyetrek.interfaces.IOnBackPressed;
 
-public class AstroActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class AstroActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,Runnable {
     static final String TAG = "AstroActivity";
 
     private Toolbar toolbar;
@@ -41,6 +44,10 @@ public class AstroActivity extends AppCompatActivity implements NavigationView.O
     private NavigationView navigationView;
     public static String dataCons[][];
     private BuildConstellation_Astro buildConstellationAstro;
+    private Thread initData;
+
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
 
     static {
        System.loadLibrary("opencv_java3");
@@ -55,10 +62,6 @@ public class AstroActivity extends AppCompatActivity implements NavigationView.O
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        buildConstellationAstro = new BuildConstellation_Astro();
-        buildConstellationAstro.initTemplates(this);
-        dataCons = readData();
 
         //Enlève la bar de notification -> FUll screen
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
@@ -73,20 +76,29 @@ public class AstroActivity extends AppCompatActivity implements NavigationView.O
         //Relier l'action des "menus" de la navView au bouton de la navView
         navigationView.setNavigationItemSelectedListener(this);
 
-
         //Enlever le titre de la toolBar
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        fragmentManager = getSupportFragmentManager();
 
-        if(savedInstanceState == null){
-            addFragment(new FragmentMenuAstro());
+        if (savedInstanceState == null){
+            Log.d(TAG, "run: Fragment Count in back Stack: " + fragmentManager.getBackStackEntryCount());
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.add(R.id.fragment_contenairAstro, new FragmentLoadingAstro(),"LoadingData");
+            transaction.commit();
         }
+        dataCons = readData();
+        initData = new Thread(BuildConstellation_Astro.getInstance(this));
+        initData.start();
 
+        Handler handler = new Handler();
+        handler.postDelayed(this, 5000);
+        Log.d(TAG, "run: Fragment Count in back Stack: " + fragmentManager.getBackStackEntryCount());
     }
 
     /**
-     * Cette méthode gère les évenemets lors d'un clique sur le bouton retour du téléphone
+     * Cette méthode gère les évenements lors d'un clique sur le bouton retour du téléphone
      */
     @Override
     public void onBackPressed() {
@@ -95,10 +107,11 @@ public class AstroActivity extends AppCompatActivity implements NavigationView.O
         }
         else {
             Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fragment_contenairAstro);
-            if (!(fragment instanceof IOnBackPressed) || !((IOnBackPressed) fragment).onBackPressed()) {
-                super.onBackPressed();
+            Log.d(TAG, "onBackPressed: Fragment Count in back Stack: " + fragmentManager.getBackStackEntryCount() + " fragment : " + fragment.getClass());
+            if (fragment != null && !(fragment instanceof FragmentMenuAstro)) {
+                fragmentManager.popBackStack();
             } else {
-                replaceFragment(new FragmentMenuAstro());
+                super.onBackPressed();
             }
         }
     }
@@ -108,17 +121,25 @@ public class AstroActivity extends AppCompatActivity implements NavigationView.O
      * @param fragment
      */
     private void replaceFragment(Fragment fragment){
+        Log.d(TAG, "replaceFragment: (fragment instanceof FragmentMenuAstro ? false : true) " + (fragment instanceof FragmentMenuAstro ? false : true));
+        boolean backState = (fragment instanceof FragmentMenuAstro ? false : true);
+        Log.d(TAG, "run: Fragment Count in back Stack: " + fragmentManager.getBackStackEntryCount());
         String backStateName = fragment.getClass().getName();
-
-        FragmentManager manager = getSupportFragmentManager();
-        boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
-
-        if (!fragmentPopped){ //fragment not in back stack, create it
-            FragmentTransaction ft = manager.beginTransaction();
-            ft.replace(R.id.fragment_contenairAstro, fragment);
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        ft.replace(R.id.fragment_contenairAstro, fragment);
+        if(backState){
             ft.addToBackStack(backStateName);
-            ft.commit();
         }
+        ft.commit();
+    }
+
+    /**
+     * Cette méthode permet d'effacer un fragment
+     */
+    private void removeFragment(){
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.remove(getSupportFragmentManager().findFragmentByTag("LoadingData"));
+        transaction.commit();
     }
 
     /**
@@ -152,7 +173,8 @@ public class AstroActivity extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
             case R.id.catalogconsNav:
-                replaceFragment(new FragmentCatalogueCons());
+                FragmentCatalogueCons fragmentCatalogueCons = new FragmentCatalogueCons();
+                replaceFragment(fragmentCatalogueCons);
                 break;
 
             case R.id.profilNav:
@@ -180,7 +202,6 @@ public class AstroActivity extends AppCompatActivity implements NavigationView.O
         String data[][] = new String [UtilAnalyseImage_Astro.ETOILE_HEMISPHERE_BOREAL][6];
 
         try {
-
             DataInputStream textFileStream = new DataInputStream(getAssets().open(String.format("DetailsConst.txt")));
             Scanner clavier = new Scanner(textFileStream);
             clavier.useDelimiter(";|\\n");
@@ -201,4 +222,18 @@ public class AstroActivity extends AppCompatActivity implements NavigationView.O
         return data;
     }
 
+    @Override
+    public void run() {
+        try{
+            initData.join();
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        finally {
+            Log.d(TAG, "onCreate: fin de l'execution du bloc try/catch");
+        }
+        Log.d(TAG, "run: Fragment Count in back Stack: " + fragmentManager.getBackStackEntryCount());
+        removeFragment();
+        replaceFragment(new FragmentMenuAstro());
+    }
 }

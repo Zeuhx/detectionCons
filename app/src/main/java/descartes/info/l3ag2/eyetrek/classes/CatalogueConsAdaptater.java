@@ -23,7 +23,6 @@ import descartes.info.l3ag2.eyetrek.R;
 import descartes.info.l3ag2.eyetrek.activity.AstroActivity;
 import descartes.info.l3ag2.eyetrek.fragment.FragmentConsCatalogDetails;
 
-
 public class CatalogueConsAdaptater extends RecyclerView.Adapter<CatalogueConsAdaptater.ExampleViewHolder> {
 
     private static final String TAG = "CatalogueConsAdaptater";

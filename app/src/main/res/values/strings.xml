@@ -265,6 +265,8 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_login_astro">Sign in</string>
+    <string name="bottom_sheet_peek">CD 1</string>
+    <string name="bottom_sheet_content">CD 2</string>
 
     <string-array name="constellations_titles">
 
@@ -321,13 +323,9 @@
     <string-array name="constellations_info">
 
         <item>Andromède est une constellation de l\'hémisphère nord. Longue, en forme de « A », Andromède fut l\'une des 48 constellations identifiées par Ptolémée.</item>
-
         <item>Le Bélier (Aries) est une constellation du zodiaque qui est traversée par le Soleil du 19 avril au 14 mai. Dans l\'ordre du zodiaque, la constellation se situe entre les Poissons à l\'ouest et le Taureau à l\'est.</item>
-
         <item>Le Bouvier est une constellation boréale. Ses étoiles principales dessinent dans le ciel un grand cerf-volant (ou un parachute).</item>
-
         <item>Le Cancer est une constellation du zodiaque traversée par le Soleil du 20 juillet au 10 août. Dans l\'ordre du zodiaque, il se situe entre les Gémeaux à l\'ouest et le Lion à l\'est.</item>
-
         <item>Cassiopée est une des 88 constellations du ciel, visible dans l\'hémisphère nord. C\'est une constellation circumpolaire, très facilement reconnaissable grâce à sa forme de « W ».</item>
         <item>Céphée est une constellation circumpolaire de l\'hémisphère nord. Elle est reconnaissable à sa forme de pentagone irrégulier, ou de dessin enfantin d\'une maison à toit pointu.</item>
         <item>La Chevelure de Bérénice est un ancien astérisme du ciel boréal qui a été défini comme l\'une des 88 constellations modernes. Elle est localisée entre le Lion à l\'ouest et le Bouvier à l\'est, et est visible des deux hémisphères.</item>
@@ -403,9 +401,6 @@
         <item>astro_34_sextans</item>
         <item>astro_35_taurus</item>
         <item>astro_36_triangulum</item>
-
-
-
 
     </string-array>
 

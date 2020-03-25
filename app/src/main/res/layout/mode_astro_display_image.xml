@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
+    <!-- Bottom : le bottom d'astro -->
     <ImageView
         android:id="@+id/affichage_image_astro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+    <!-- Layout si on reconnait -->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/detected_astro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="descartes.info.l3ag2.eyetrek.activity.AstroActivity">
+
+        <include layout="@layout/bottom_astro"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!-- Layout si on ne reconnait pas -->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:id="@+id/undetected_astro"
+        android:layout_height="match_parent"
+        tools:context="descartes.info.l3ag2.eyetrek.activity.AstroActivity">
+
+        <include layout="@layout/bottom_astro_nonreconnue"/>
+    </android.support.design.widget.CoordinatorLayout>
 
 </android.support.constraint.ConstraintLayout>
-
-

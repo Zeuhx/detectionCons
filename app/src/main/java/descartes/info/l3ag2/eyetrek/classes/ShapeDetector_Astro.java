@@ -152,23 +152,23 @@ public class ShapeDetector_Astro {
      * @param label_array le vecteur de label de retour, representant la taille des cercle des etoiles
      */
     public static void detect_stars(Mat image_src, Mat image_dest, List<Double> x_array, List<Double> y_array, List<Double> label_array){
-        Imgproc.threshold(image_src, image_dest, 127,255,Imgproc.THRESH_BINARY);
+        Imgproc.threshold(image_src, image_dest, 100,255,Imgproc.THRESH_BINARY);
         List<MatOfPoint> contours = new ArrayList<>() ; // result
         Mat hierarchy = new Mat();
-        int mode = Imgproc.RETR_TREE ; // sous forme d'arbre en fonction du contenu
+        int mode = Imgproc.RETR_LIST ; // sous forme d'arbre en fonction du contenu
         int method = Imgproc.CHAIN_APPROX_SIMPLE ;
         /**
          * L'utilisation de la methode findContours est explique dans la methode " remove_stars "
          */
-        Imgproc.findContours(image_src, contours, hierarchy, mode, method, new Point(-1,-1));
-
-        Log.d(TAG, "detect_stars: find contour " + contours.size());
+        Imgproc.findContours(image_src, contours, hierarchy, mode, method, new Point(0,0));
+        //Log.d(TAG, "detect_stars: find contour " + contours.size());
         // From :  contours, h = cv2.findContours(thresh, 1, 2)
 
         /*ArrayList<Double> x_array = new ArrayList<>() ;  // Contient la liste de coordonees x
         ArrayList<Double> y_array = new ArrayList<>() ;
         ArrayList<Double> label_array = new ArrayList<>() ;*/
 
+        Log.d(TAG, "detect_stars: find Contours :" + contours.size());
         /**
          * On parcours l'ensemble des contours
          * @TODO a completer par la suite
@@ -187,49 +187,18 @@ public class ShapeDetector_Astro {
              */
             Imgproc.approxPolyDP(new MatOfPoint2f(cnt.toArray()),approxCurve, espilon, true);
             // Si il y a une etoie qui est trouve, pas sur ...
-            Log.d(TAG, "detect_stars: approxCurve.total() > 2 " + (approxCurve.total() > 2) );
-            if(approxCurve.total() > 2){
-                // Calculates all of the moments up to the third order of a polygon or rasterized shape.
+            //Log.d(TAG, "detect_stars: approxCurve.total() > 2 " + (approxCurve.total() > 2) );
+            if(approxCurve.total() >= 2){
+                // Calcule tous les moments jusqu'au troisième ordre d'un polygone ou d'une forme trame
                 Moments m = Imgproc.moments(cnt);
                 double x_etoile = (m.m10/m.m00)/100 ;
                 double y_etoile = ((m.m01/m.m00)*-1)/100 ;
 
-                Log.d(TAG, "detect_stars: x " + x_etoile);
-                Log.d(TAG, "detect_stars: y " + y_etoile);
+                /*Log.d(TAG, "detect_stars: x " + x_etoile);
+                Log.d(TAG, "detect_stars: y " + y_etoile);*/
 
-                for(int i = 0 ; i<x_array.size() ; i++) {
-                    if (x_etoile == x_array.get(i)) {
-                        int index = i;
-                        if ((double) Math.round(y_etoile * 10d) / 10d == (double) Math.round((y_array.get(index) * 10d) / 10d)) {
-                            if (cnt.total() < label_array.get(index)) {
-                                Double label = new Double(cnt.total()); // Je sais pas ??
-                                label_array.set(index, label);
-                                continue;
-                            }
-                        }
-                    }
-                }
-
-                for(int i = 0 ; i<y_array.size() ; i++) {
-                    if (y_etoile == y_array.get(i)) {
-                        int index = i;
-                        if ((double) Math.round(y_etoile * 10d) / 10d == (double) Math.round((y_array.get(index) * 10d) / 10d)) {
-                            Rect rect = Imgproc.boundingRect(cnt);
-                            int a = rect.x;
-                            int b = rect.y;
-                            int h = rect.height;
-                            int w = rect.width;
-                            // From : a, b, w, h = cv2.boundingRect(cnt)
-                            if (Math.min(w, h) < label_array.get(index) && (Imgproc.contourArea(cnt) < 2000)) {
-                                label_array.set(index, (double) Math.round(Math.min(w, h) * 100d) / 100d);
-                            }
-                            continue ;
-                        }
-                    }
-                }
-
-                Log.d(TAG, "detect_stars: contoursArea < 2000 " + (Imgproc.contourArea(cnt)<2000));
-                if(Imgproc.contourArea(cnt)<2000){
+                //Log.d(TAG, "detect_stars: contoursArea < 100000 " + (Imgproc.contourArea(cnt)<100000));
+                if(Imgproc.contourArea(cnt)<100000){
                     x_array.add(x_etoile);
                     y_array.add(y_etoile);
 

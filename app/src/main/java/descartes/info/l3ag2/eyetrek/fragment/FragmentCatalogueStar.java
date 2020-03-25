@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,7 @@ import android.view.ViewGroup;
 import descartes.info.l3ag2.eyetrek.R;
 import descartes.info.l3ag2.eyetrek.interfaces.IOnBackPressed;
 
-public class FragmentCatalogueStar extends Fragment implements IOnBackPressed {
+public class FragmentCatalogueStar extends Fragment {
 
     public static final String TAG = "FragmentCatalogueStar";
 
@@ -28,28 +29,8 @@ public class FragmentCatalogueStar extends Fragment implements IOnBackPressed {
         toolbar.setTitle("Catalogue Des Etoiles");
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(),R.drawable.ic_arrow_back_black_32dp));
         toolbar.setNavigationOnClickListener((viewl) -> {
-            replaceFragment(new FragmentMenuAstro());
-            onBackPressed();
+            getActivity().onBackPressed();
         });
         return view;
-    }
-
-    @Override
-    public boolean onBackPressed() {
-        return false;
-    }
-
-    private void replaceFragment(Fragment fragment){
-        String backStateName = fragment.getClass().getName();
-
-        FragmentManager manager = getActivity().getSupportFragmentManager();
-        boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
-
-        if (!fragmentPopped){ //fragment not in back stack, create it
-            FragmentTransaction ft = manager.beginTransaction();
-            ft.replace(R.id.fragment_contenairAstro, fragment);
-            ft.addToBackStack(backStateName);
-            ft.commit();
-        }
     }
 }

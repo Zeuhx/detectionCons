@@ -21,12 +21,7 @@ import java.util.List;
 
 import descartes.info.l3ag2.eyetrek.R;
 
-public class DrawableImageView extends android.support.v7.widget.AppCompatImageView
-
-
-
-
-        {
+public class DrawableImageView extends android.support.v7.widget.AppCompatImageView  {
 
 private static final String TAG = "DrawableImageView";
 

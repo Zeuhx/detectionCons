@@ -24,7 +24,7 @@ public class Drawing_Astro {
              * Color en Scalar (jaune)
              * Epaisseur : negative signifie qu'un cercle plein.
              */
-            Imgproc.circle(img, new Point(Math.round(x_array.get(i) * 100),-Math.round(y_array.get(i) * 100)), echelle, new Scalar(255, 255,0), -1);
+            Imgproc.circle(img, new Point(Math.round(x_array.get(i) * 100),-Math.round(y_array.get(i) * 100)), echelle, new Scalar(255, 255,0), 3);
         }
     }
 

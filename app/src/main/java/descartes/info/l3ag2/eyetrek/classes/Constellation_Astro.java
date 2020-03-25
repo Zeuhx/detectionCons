@@ -5,33 +5,45 @@ import android.util.Log;
 import org.opencv.core.Mat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Constellation_Astro {
     private static final String TAG = "Constellation_Astro";
 
+    private String name;
+    private int id;
     private List<Double> etoile_x_array ;
     private List<Double> etoile_y_array ;
     private List<Double> etoile_magnitude_array ;
     private List<Mat> lignes_array ;
     private int nbOfStars ;
-    private List<Double> luminosite_etoile_array ;
+    private int [] indice_luminosite;
 
-    public Constellation_Astro(List<Double> etoile_x_array, List<Double> etoile_y_array, List<Double> etoile_magnitude_array, List<Mat> lignes_array) {
+
+    public Constellation_Astro(String name, int id, List<Double> etoile_x_array, List<Double> etoile_y_array, List<Double> etoile_magnitude_array, List<Mat> lignes_array) {
+        this.name = name;
+        this.id = id;
         this.etoile_x_array = etoile_x_array;
         this.etoile_y_array = etoile_y_array;
         this.etoile_magnitude_array = etoile_magnitude_array;
         this.lignes_array = lignes_array;
+        this.nbOfStars = etoile_magnitude_array.size() ;
+        this.indice_luminosite = ArraysUtils.argsort(ArraysUtils.convertDoublePrimitiveArray(etoile_magnitude_array),false);
 
-        nbOfStars = etoile_magnitude_array.size() ;
     }
 
-    private void aligner_constellation(){
+    public void aligner_constellation(){
+        Log.d(TAG, "aligner_constellation: xArrayA : " + etoile_x_array.toString() + " yArrays : " + etoile_y_array.toString());
+        if(indice_luminosite.length >= 2){
+            straighten();
+            double xCoorMaxLumin = etoile_x_array.get(indice_luminosite[0]);
+            double yCoorMaxLumin = etoile_y_array.get(indice_luminosite[0]);
 
-        int index = Integer.parseInt(luminosite_etoile_array.get(0).toString());
-        Log.d(TAG, "aligner_constellation: Verif que l'index est un int : " + index);
-        Double lumino_x = etoile_x_array.get(index);
-        Double lumino_y = etoile_y_array.get(index);
+            //UtilAnalyseImage_Astro.alignerToCoordonnes(etoile_x_array,etoile_y_array,xCoorMaxLumin,yCoorMaxLumin);
+        }
+
+        Log.d(TAG, "aligner_constellation: xArrayAprès : " + etoile_x_array.toString() + " yArrays : " + etoile_y_array.toString());
 
     }
 
@@ -41,15 +53,6 @@ public class Constellation_Astro {
      *
      */
     private double alignementMemeAxe(List<Double> x_array, List<Double> y_array, List<Double> magnitude){
-        magnitude.sort((x,y) -> {
-            if(x>y){
-                return 1 ;
-            } else if (x == y) {
-                return 0 ;
-            } else {
-                return -1 ;
-            }
-        });
 
         List<Double> magnitude_etoile_triee = new ArrayList<>(magnitude);
         
@@ -85,5 +88,74 @@ public class Constellation_Astro {
             ret_ylistRot.set(i, yprime);
         }
     }
+
+    public List<Double> getEtoile_x_array() {
+        return etoile_x_array;
+    }
+
+    public List<Double> getEtoile_y_array() {
+        return etoile_y_array;
+    }
+
+    public List<Double> getEtoile_magnitude_array() {
+        return etoile_magnitude_array;
+    }
+
+    public int getNbOfStars() {
+        return nbOfStars;
+    }
+
+    public int[] getIndice_luminosite() {
+        return indice_luminosite;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Met a l'echelle les valeur de x et y en divant par l'echelle entree en parametre
+     * @param x_array un tableau d'entree de x qui sera modifier a la sortie
+     * @param y_array un tableau d'entree de y qui sera modifier en sortie
+     * @param echelle l'echelle
+     */
+    private void toMemeEchelle(List<Double> x_array, List<Double> y_array, double echelle){
+        for (int i = 0; i <x_array.size() ; i++) {
+            x_array.set(i, x_array.get(i)/echelle);
+            y_array.set(i, y_array.get(i)/echelle);
+        }
+    }
+
+    private void straighten(){
+
+
+        int indice1 = indice_luminosite[0];
+        int indice2 = indice_luminosite[1];
+
+        double dx = etoile_x_array.get(indice2) - etoile_x_array.get(indice1);
+        double dy = etoile_y_array.get(indice2) - etoile_y_array.get(indice1);
+
+        double diff = dy/dx ;
+        double angle = 90 * (1 - (Math.signum(dx))) + Math.atan(diff);
+
+        double xprime ;
+        double yprime ;
+
+        for (int i = 0; i < nbOfStars; i++) {
+            // Calcul de la matrice de rotation : calcul des valeurs de rotation pour chaque coordonnées d'étoile de template
+            xprime = ((getEtoile_x_array().get(i) * Math.cos(angle)) - (getEtoile_y_array().get(i) * Math.sin(angle)));
+            yprime = ((getEtoile_x_array().get(i) * (Math.sin(angle))) + (getEtoile_y_array().get(i) * Math.cos(angle)));
+            etoile_x_array.set(i,xprime);
+            etoile_y_array.set(i,yprime);
+        }
+
+        Log.d(TAG, "straighten: xArray " + etoile_x_array.toString());
+
+    }
+
 
 }
