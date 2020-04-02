@@ -113,7 +113,6 @@ public class CatalogueConsAdaptater extends RecyclerView.Adapter<CatalogueConsAd
     public ExampleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.const_catalogue_item, parent, false);
         ExampleViewHolder evh = new ExampleViewHolder(v, mListener);
-
         return evh;
     }
 

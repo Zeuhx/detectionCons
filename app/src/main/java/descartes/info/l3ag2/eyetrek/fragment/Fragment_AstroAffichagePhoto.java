@@ -5,6 +5,7 @@ import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -24,9 +25,11 @@ import java.io.IOException;
 
 import descartes.info.l3ag2.eyetrek.R;
 import descartes.info.l3ag2.eyetrek.activity.AstroActivity;
+import descartes.info.l3ag2.eyetrek.classes.Constellation_Candidat;
+import descartes.info.l3ag2.eyetrek.classes.Drawing_Astro;
 import descartes.info.l3ag2.eyetrek.classes.UtilAnalyseImage_Astro;
 
-public class Fragment_AstroAffichagePhoto extends Fragment {
+public class Fragment_AstroAffichagePhoto extends Fragment implements Runnable {
 
     /**
      * Chaque champ du bottom sheet
@@ -37,13 +40,19 @@ public class Fragment_AstroAffichagePhoto extends Fragment {
     private TextView textView4;
     private TextView textView5;
     private TextView textView6;
-    private int idCons ;
+    private int idCons = 0;
 
-    boolean isDetected = true ;
-    private ImageView mImageView = null ;
+    boolean isDetected = false ;
+    private ImageView mImageView;
     private Toolbar toolbar;
+    private Bitmap bitmap;
     private static final String TAG = "Fragment_AstroAffichage";
     private static final String KEY_URI = "URI";
+
+    private CoordinatorLayout coordinatorLayoutdetected_astro;
+    private CoordinatorLayout coordinatorLayoutnondetected_astro;
+    private Thread analyseEtoile;
+    public static Constellation_Candidat detectConstellation;
 
     /**
      * Creer une nouvelle instance de Fragment_AstroAffichagePhoto
@@ -76,79 +85,33 @@ public class Fragment_AstroAffichagePhoto extends Fragment {
          * Si une constellation n'est pas reconnu, on cache le " detected "
          * Sinon on cache le non detected
          */
-        if(!isDetected){
-            // Id de la constellation reconnu, information qui est renvoyer par l'algo
-
-           CoordinatorLayout coordinatorLayout = view.findViewById(R.id.detected_astro);
-           coordinatorLayout.setVisibility(View.GONE);
-        } else {
-            CoordinatorLayout coordinatorLayout = view.findViewById(R.id.undetected_astro);
-            coordinatorLayout.setVisibility(View.GONE);
-
-            int idCons = getArguments().getInt("idCons");
-            textView = view.findViewById(R.id.nom_constellation_bottom_sheet);
-            textView.setText(AstroActivity.dataCons[idCons][0]);
-
-            textView2 = view.findViewById(R.id.nom_constellation2_bottom_sheet);
-            textView2.setText(AstroActivity.dataCons[idCons][1]);
-
-            textView3 = view.findViewById(R.id.ascension_droite_bottom_sheet);
-            textView3.setText(AstroActivity.dataCons[idCons][2]);
-
-            textView4 = view.findViewById(R.id.declinaison_bottom_sheet);
-            textView4.setText(AstroActivity.dataCons[idCons][3]);
-
-            textView5 = view.findViewById(R.id.etoile_brillante_bottom_sheet);
-            textView5.setText(AstroActivity.dataCons[idCons][4]);
-
-            textView6 = view.findViewById(R.id.etoile_proche_bottom_sheet);
-            textView6.setText(AstroActivity.dataCons[idCons][5]);
-
-        }
 
         Uri uri = getArguments().getParcelable(KEY_URI);
-
+        coordinatorLayoutdetected_astro = view.findViewById(R.id.detected_astro);
+        coordinatorLayoutnondetected_astro = view.findViewById(R.id.undetected_astro);
+        textView = view.findViewById(R.id.nom_constellation_bottom_sheet);
+        textView2 = view.findViewById(R.id.nom_constellation2_bottom_sheet);
+        textView3 = view.findViewById(R.id.ascension_droite_bottom_sheet);
+        textView4 = view.findViewById(R.id.declinaison_bottom_sheet);
+        textView5 = view.findViewById(R.id.etoile_brillante_bottom_sheet);
+        textView6 = view.findViewById(R.id.etoile_proche_bottom_sheet);
         //Log.d(TAG, "onCreateView: URI : " + bitmap.toString());
-
-        // Pour transformer en bitmap depuis l'image
-       //  Bitmap bitmap = (Bitmap) getArguments().getParcelable("bitmap");
-//        BitmapFactory.Options opt = new BitmapFactory.Options();
-//        Bitmap bitmap =  BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length,opt);
-//        savedInstanceState.putParcelable("bm", bitmap);
-//        Bitmap bm = savedInstanceState.getParcelable("bm");
-
-
-        // Pour transformer en bitmap depuis l'image
-        // Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
-
-/*        Log.d(TAG, "onCreateView: avant compression de l'image " + bitmapLength);
-        if(bitmapLength > 10){
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 0, stream);
-            Log.d(TAG, "onCreateView: apres compression 1 " + bitmap.getByteCount());
-            if(bitmapLength > 50){
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 0, stream);
-               // bitmapLength = bitmap.getDensity();
-                Log.d(TAG, "onCreateView: apres compression 2 " + bitmapLength);
-                if(bitmapLength > 100) {
-                    bitmap.compress(Bitmap.CompressFormat.JPEG, 0, stream);
-                    //bitmapLength = bitmap.getDensity();
-                    Log.d(TAG, "onCreateView: apres compression 3 " + bitmapLength);
-                }
-            }
-            byteArray = stream.toByteArray();
-        }*/
 
         // On dit que c'est une instance (unique)
         UtilAnalyseImage_Astro utilAnalyseImage_astro = UtilAnalyseImage_Astro.getInstance();
-        Bitmap bitmap = getBitMapresized(uri);
+        bitmap = getBitMapresized(uri);
 
 
         mImageView = view.findViewById(R.id.affichage_image_astro);
-
         utilAnalyseImage_astro.setBitmap(bitmap);
-        bitmap = utilAnalyseImage_astro.starAnalyse();
+        mImageView.setImageBitmap(UtilAnalyseImage_Astro.getInstance().starAnalyse());
 
-        mImageView.setImageBitmap(bitmap);
+        analyseEtoile = new Thread(UtilAnalyseImage_Astro.getInstance());
+        analyseEtoile.start();
+
+        Handler handler = new Handler();
+        handler.postDelayed(this, 2000);
+
 
         return view;
     }
@@ -193,4 +156,35 @@ public class Fragment_AstroAffichagePhoto extends Fragment {
         return resizedBitmap;
     }
 
+    @Override
+    public void run() {
+
+        try {
+            analyseEtoile.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        if(detectConstellation != null){
+            idCons = detectConstellation.getId();
+            isDetected = true;
+
+            if (detectConstellation.getName().equals("Gémeaux") || detectConstellation.getName().equals("Bouvier")){
+                Log.d(TAG, "run: connecxion null ? " + detectConstellation.getConnexion());
+                mImageView.setImageBitmap(Drawing_Astro.dessineAsterisme(bitmap,detectConstellation));
+            }
+        }
+
+        if(!isDetected){
+            coordinatorLayoutdetected_astro.setVisibility(View.GONE);
+        } else {
+            coordinatorLayoutnondetected_astro.setVisibility(View.GONE);
+            textView.setText(AstroActivity.dataCons[idCons][0]);
+            textView2.setText(AstroActivity.dataCons[idCons][1]);
+            textView3.setText(AstroActivity.dataCons[idCons][2]);
+            textView4.setText(AstroActivity.dataCons[idCons][3]);
+            textView5.setText(AstroActivity.dataCons[idCons][4]);
+            textView6.setText(AstroActivity.dataCons[idCons][5]);
+        }
+    }
 }

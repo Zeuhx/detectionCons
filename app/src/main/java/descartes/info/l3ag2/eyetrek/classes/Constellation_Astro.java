@@ -3,15 +3,20 @@ package descartes.info.l3ag2.eyetrek.classes;
 import android.util.Log;
 
 import org.opencv.core.Mat;
+import org.opencv.core.Point;
+import org.opencv.core.Scalar;
+import org.opencv.imgproc.Imgproc;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.StringTokenizer;
 
 public class Constellation_Astro {
     private static final String TAG = "Constellation_Astro";
 
     private String name;
+    private String connexion;
     private int id;
     private List<Double> etoile_x_array ;
     private List<Double> etoile_y_array ;
@@ -20,7 +25,14 @@ public class Constellation_Astro {
     private int nbOfStars ;
     private int [] indice_luminosite;
 
-
+    /**
+     * Exemple
+     * x 4 3 5 2 4
+     * y 2 3 4 5 2
+     * m 1 1 2 4 1.5
+     * -
+     * 3 2 4 0 1
+     */
     public Constellation_Astro(String name, int id, List<Double> etoile_x_array, List<Double> etoile_y_array, List<Double> etoile_magnitude_array, List<Mat> lignes_array) {
         this.name = name;
         this.id = id;
@@ -30,7 +42,19 @@ public class Constellation_Astro {
         this.lignes_array = lignes_array;
         this.nbOfStars = etoile_magnitude_array.size() ;
         this.indice_luminosite = ArraysUtils.argsort(ArraysUtils.convertDoublePrimitiveArray(etoile_magnitude_array),false);
+        this.connexion = null;
+    }
 
+    public Constellation_Astro(String name, int id, List<Double> etoile_x_array, List<Double> etoile_y_array, List<Double> etoile_magnitude_array, List<Mat> lignes_array,String connexion){
+        this.name = name;
+        this.id = id;
+        this.etoile_x_array = etoile_x_array;
+        this.etoile_y_array = etoile_y_array;
+        this.etoile_magnitude_array = etoile_magnitude_array;
+        this.lignes_array = lignes_array;
+        this.nbOfStars = etoile_magnitude_array.size() ;
+        this.indice_luminosite = ArraysUtils.argsort(ArraysUtils.convertDoublePrimitiveArray(etoile_magnitude_array),false);
+        this.connexion = connexion;
     }
 
     public void aligner_constellation(){
@@ -155,6 +179,10 @@ public class Constellation_Astro {
 
         Log.d(TAG, "straighten: xArray " + etoile_x_array.toString());
 
+    }
+
+    public String getConnexion(){
+        return connexion;
     }
 
 

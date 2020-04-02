@@ -69,14 +69,28 @@ public class BuildConstellation_Astro implements Runnable {
                         ArraysUtils.initList(y_array,clavier.next());
                         ArraysUtils.initList(label_array,clavier.next());
                         //Création de la constellation, le paramètre ligne sont à null, à faire
-                        Constellation_Astro constelation = new Constellation_Astro(conName, i, x_array, y_array, label_array, null);
 
-                        Log.d(TAG, "c: x_array : " + constelation.getEtoile_x_array());
-                        Log.d(TAG, "initTemplatesFromDataBase: y_array : " + constelation.getEtoile_y_array());
-                        Log.d(TAG, "initTemplatesFromDataBase: label_array : " + constelation.getEtoile_magnitude_array());
-                        Log.d(TAG, "initTemplatesFromDataBase: indice : " + ArraysUtils.StringArray(constelation.getIndice_luminosite()));
+                        Constellation_Astro constelation = null;
+
+                        if (conName.equals("Gémeaux")){
+                            constelation = new Constellation_Astro(conName, i, x_array, y_array, label_array, null,"15,16,12,8,5.16.13,4.6,5.14,8.12.15,7.3,15,16,15.16,7.2,4,6,0.7.11.9,1.11.10.4");
+                            Log.d(TAG, "initTemplatesFromDataBase: connexion Gemeaux : " + constelation.getConnexion());
+                        }
+                        else if (conName.equals("Bouvier")){
+                            constelation = new Constellation_Astro(conName, i, x_array, y_array, label_array, null,"1.2.7,0.5,0.10,6.4.8,0.3,1.6,5,0,3.9.11,8.11,2,9.8");
+                            Log.d(TAG, "initTemplatesFromDataBase: connexion Gemeaux : " + constelation.getConnexion());
+                        }
+                        else {
+                            constelation = new Constellation_Astro(conName, i, x_array, y_array, label_array, null);
+                        }
+
+
+//                        Log.d(TAG, "c: x_array : " + constelation.getEtoile_x_array());
+//                        Log.d(TAG, "initTemplatesFromDataBase: y_array : " + constelation.getEtoile_y_array());
+//                        Log.d(TAG, "initTemplatesFromDataBase: label_array : " + constelation.getEtoile_magnitude_array());
+//                        Log.d(TAG, "initTemplatesFromDataBase: indice : " + ArraysUtils.StringArray(constelation.getIndice_luminosite()));
                         Log.d(TAG, "initTemplatesFromDataBase: name : " + consName[i]);
-                        Log.d(TAG, "initTemplatesFromDataBase: size label: " + label_array.size());
+//                        Log.d(TAG, "initTemplatesFromDataBase: size label: " + label_array.size());
 
                         constellation_astros.add(constelation);
                     }

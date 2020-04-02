@@ -347,7 +347,6 @@ public class FragmentMenuAstro extends Fragment {
                 // Rappelle le fragment : affiche le contenu du fragment
                 replaceFragment(Fragment_AstroAffichagePhoto.newInstance(uri));
             }
-
             if (requestCode == READ_REQ) {
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
                 // Reprend le contexte du parent du fragment en question

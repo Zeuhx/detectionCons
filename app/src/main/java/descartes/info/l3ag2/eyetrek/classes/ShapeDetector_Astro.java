@@ -155,7 +155,7 @@ public class ShapeDetector_Astro {
         Imgproc.threshold(image_src, image_dest, 100,255,Imgproc.THRESH_BINARY);
         List<MatOfPoint> contours = new ArrayList<>() ; // result
         Mat hierarchy = new Mat();
-        int mode = Imgproc.RETR_LIST ; // sous forme d'arbre en fonction du contenu
+        int mode = Imgproc.RETR_LIST ; // sous forme de liste en fonction du contenu
         int method = Imgproc.CHAIN_APPROX_SIMPLE ;
         /**
          * L'utilisation de la methode findContours est explique dans la methode " remove_stars "
@@ -198,7 +198,7 @@ public class ShapeDetector_Astro {
                 Log.d(TAG, "detect_stars: y " + y_etoile);*/
 
                 //Log.d(TAG, "detect_stars: contoursArea < 100000 " + (Imgproc.contourArea(cnt)<100000));
-                if(Imgproc.contourArea(cnt)<100000){
+                if(Imgproc.contourArea(cnt)<3000 && Imgproc.contourArea(cnt)>125){
                     x_array.add(x_etoile);
                     y_array.add(y_etoile);
 

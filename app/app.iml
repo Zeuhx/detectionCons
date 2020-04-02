@@ -163,6 +163,5 @@
     <orderEntry type="library" name="Gradle: com.github.bumptech.glide:gifdecoder:4.6.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.volley:volley:1.1.1@aar" level="project" />
     <orderEntry type="module" module-name="openCVLibrary342" />
-    <orderEntry type="module" module-name="openCVLibrary342" />
   </component>
 </module>
